@@ -51,11 +51,11 @@ if (WP_ENV == 'development') {
 // /** MySQL hostname */
 // define('DB_HOST', 'localhost');
 
-// /** Database Charset to use in creating database tables. */
-// define('DB_CHARSET', 'utf8');
+/** Database Charset to use in creating database tables. */
+define('DB_CHARSET', 'utf8');
 
-// /** The Database Collate type. Don't change this if in doubt. */
-// define('DB_COLLATE', '');
+/** The Database Collate type. Don't change this if in doubt. */
+define('DB_COLLATE', '');
 
 /**#@+
  * Authentication Unique Keys and Salts.
