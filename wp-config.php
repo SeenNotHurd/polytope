@@ -19,7 +19,7 @@ define('WP_HOME',    'http://' . $_SERVER['SERVER_NAME']);
 define('WP_CONTENT_DIR', $_SERVER['DOCUMENT_ROOT'] . '/wp-content');
 define('WP_CONTENT_URL', 'http://' . $_SERVER['SERVER_NAME'] . '/wp-content');
 
-if ($_SERVER['REMOTE_ADDR']=='127.0.0.1') {
+if ($_SERVER['REMOTE_ADDR']=='33.33.33.1') {
     define('WP_ENV', 'development');
 } else {
     define('WP_ENV', 'production');
@@ -27,15 +27,15 @@ if ($_SERVER['REMOTE_ADDR']=='127.0.0.1') {
 
 // MySQL settings - You can get this info from your web host //
 if (WP_ENV == 'development') {
-    define('DB_NAME', 'mydb-dev');
-    define('DB_USER', 'root');
-    define('DB_PASSWORD', '');
+    define('DB_NAME', 'polytope');
+    define('DB_USER', 'polytope');
+    define('DB_PASSWORD', 'polytope_password');
     define('DB_HOST', 'localhost');
 } else {
-    define('DB_NAME', 'mydb-prod');
-    define('DB_USER', 'username');
-    define('DB_PASSWORD', 'pasdword');
-    define('DB_HOST', 'mysql.mysite.com');
+    define('DB_NAME', 'polytope');
+    define('DB_USER', 'polytope');
+    define('DB_PASSWORD', 'polytope_password');
+    define('DB_HOST', 'localhost');
 } 
 
 // ** MySQL settings - You can get this info from your web host ** //
@@ -102,7 +102,12 @@ define('WPLANG', '');
  * It is strongly recommended that plugin and theme developers use WP_DEBUG
  * in their development environments.
  */
-define('WP_DEBUG', false);
+if(WP_ENV == 'development') {
+  define('WP_DEBUG', true);
+  echo 'debug on';
+} else {
+  define('WP_DEBUG', false);
+}
 
 /* That's all, stop editing! Happy blogging. */
 
