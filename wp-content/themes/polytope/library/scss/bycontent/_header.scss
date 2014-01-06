@@ -1,0 +1,19 @@
+/**
+ * Site Name:
+ * Author:
+ * 
+ * Stylesheet: Header theming
+ * 
+ * Specific header theming
+ * 
+ */
+
+#logo {
+  width: 30%;
+}
+
+// Hide the blog name always but still visible for screen readers.
+#blog-name {
+  @include visuallyhidden;
+}
+

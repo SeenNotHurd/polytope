@@ -1,0 +1,109 @@
+/**
+ * Font css
+ */
+
+ @font-face {
+    font-family: 'lovelo';
+    src: url('../fonts/lovelo_black-webfont.eot');
+    src: url('../fonts/lovelo_black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lovelo_black-webfont.woff') format('woff'),
+         url('../fonts/lovelo_black-webfont.ttf') format('truetype'),
+         url('../fonts/lovelo_black-webfont.svg#loveloblack') format('svg');
+    font-weight: 800;
+    font-style: normal;
+
+}
+
+// @font-face {
+//     font-family: 'lovelo-line';
+//     src: url('../fonts/lovelo_line_bold-webfont.eot');
+//     src: url('../fonts/lovelo_line_bold-webfont.eot?#iefix') format('embedded-opentype'),
+//          url('../fonts/lovelo_line_bold-webfont.woff') format('woff'),
+//          url('../fonts/lovelo_line_bold-webfont.ttf') format('truetype'),
+//          url('../fonts/lovelo_line_bold-webfont.svg#loveloline_bold') format('svg');
+//     font-weight: 600;
+//     font-style: normal;
+
+// }
+
+// @font-face {
+//     font-family: 'lovelo-line';
+//     src: url('../fonts/lovelo_line_light-webfont.eot');
+//     src: url('../fonts/lovelo_line_light-webfont.eot?#iefix') format('embedded-opentype'),
+//          url('../fonts/lovelo_line_light-webfont.woff') format('woff'),
+//          url('../fonts/lovelo_line_light-webfont.ttf') format('truetype'),
+//          url('../fonts/lovelo_line_light-webfont.svg#loveloline_light') format('svg');
+//     font-weight: 200;
+//     font-style: normal;
+
+//}
+
+@font-face {
+    font-family: 'aleo';
+    src: url('../fonts/aleo-light-webfont.eot');
+    src: url('../fonts/aleo-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/aleo-light-webfont.woff') format('woff'),
+         url('../fonts/aleo-light-webfont.ttf') format('truetype'),
+         url('../fonts/aleo-light-webfont.svg#aleolight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'aleo';
+    src: url('../fonts/aleo-lightitalic-webfont.eot');
+    src: url('../fonts/aleo-lightitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/aleo-lightitalic-webfont.woff') format('woff'),
+         url('../fonts/aleo-lightitalic-webfont.ttf') format('truetype'),
+         url('../fonts/aleo-lightitalic-webfont.svg#aleolightitalic') format('svg');
+    font-weight: 200;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'aleo';
+    src: url('../fonts/aleo-regular-webfont.eot');
+    src: url('../fonts/aleo-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/aleo-regular-webfont.woff') format('woff'),
+         url('../fonts/aleo-regular-webfont.ttf') format('truetype'),
+         url('../fonts/aleo-regular-webfont.svg#aleoregular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+
+}@font-face {
+    font-family: 'aleo';
+    src: url('../fonts/aleo-bold-webfont.eot');
+    src: url('../fonts/aleo-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/aleo-bold-webfont.woff') format('woff'),
+         url('../fonts/aleo-bold-webfont.ttf') format('truetype'),
+         url('../fonts/aleo-bold-webfont.svg#aleobold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'aleo';
+    src: url('../fonts/aleo-bolditalic-webfont.eot');
+    src: url('../fonts/aleo-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/aleo-bolditalic-webfont.woff') format('woff'),
+         url('../fonts/aleo-bolditalic-webfont.ttf') format('truetype'),
+         url('../fonts/aleo-bolditalic-webfont.svg#aleobolditalic') format('svg');
+    font-weight: 600;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'aleo';
+    src: url('../fonts/aleo-italic-webfont.eot');
+    src: url('../fonts/aleo-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/aleo-italic-webfont.woff') format('woff'),
+         url('../fonts/aleo-italic-webfont.ttf') format('truetype'),
+         url('../fonts/aleo-italic-webfont.svg#aleoitalic') format('svg');
+    font-weight: 400;
+    font-style: italic;
+
+}
