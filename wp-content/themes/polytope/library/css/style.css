@@ -1529,6 +1529,12 @@ FOOTER STYLES
 /* line 835, ../scss/_base.scss */
 #inner-footer {
   border-top: 1px solid #c8c8c8;
+  padding: 1rem 0;
+}
+
+/* line 840, ../scss/_base.scss */
+.email, .phone {
+  margin: 0;
 }
 
 /*
@@ -1540,18 +1546,19 @@ it simple because you'll have to
 override these styles for the desktop
 view.
 */
-/* line 847, ../scss/_base.scss */
+/* line 852, ../scss/_base.scss */
 .footer-nav {
   border-top: 0;
+  margin: 0;
 }
-/* line 851, ../scss/_base.scss */
+/* line 857, ../scss/_base.scss */
 .footer-nav li a {
   border: 0;
   padding: 0;
 }
 
 /* end .footer-nav */
-/* line 864, ../scss/_base.scss */
+/* line 870, ../scss/_base.scss */
 .home .footer-nav {
   position: absolute;
   overflow: hidden;
@@ -1567,7 +1574,7 @@ view.
 WOOOMMERCE STYLES
 *********************/
 /* Header cart */
-/* line 874, ../scss/_base.scss */
+/* line 880, ../scss/_base.scss */
 #header-cart {
   text-decoration: none;
   display: inline-block;
@@ -1838,7 +1845,7 @@ you can add resource intensive styles.
   of overriding here if you styled them for
   mobile. Make sure to double check these!
   */
-  /* line 289, ../scss/_768up.scss */
+  /* line 288, ../scss/_768up.scss */
   .footer-info,
   #footer-menu {
     width: 33%;
@@ -1846,10 +1853,6 @@ you can add resource intensive styles.
   }
 
   /* line 294, ../scss/_768up.scss */
-  .footer-nav {
-    margin: 1rem 0;
-  }
-  /* line 296, ../scss/_768up.scss */
   .footer-nav li {
     float: none;
     /*
@@ -1860,11 +1863,22 @@ you can add resource intensive styles.
   }
 
   /* end .footer-nav */
+  /* line 308, ../scss/_768up.scss */
+  .home .footer-info {
+    width: 100%;
+  }
+  /* line 310, ../scss/_768up.scss */
+  .home .footer-info p {
+    margin: 0;
+    float: left;
+    padding-right: 1rem;
+  }
+
   /*********************
   WOOOMMERCE STYLES
   *********************/
   /* Header cart */
-  /* line 316, ../scss/_768up.scss */
+  /* line 323, ../scss/_768up.scss */
   #header-cart {
     padding-top: 2.5rem;
   }

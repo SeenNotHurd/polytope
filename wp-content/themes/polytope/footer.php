@@ -3,15 +3,13 @@
 				<div id="inner-footer" class="wrap clearfix">
 
 					<div class="footer-info">
-						<p class="contact-info">
-							info@polytope-seating.com<br>
-							+358 466 30 9520
-						</p>
+						<p class="email">info@polytope-seating.com</p>
+						<p class="phone">+358 466 30 9520</p>
 
 						<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?></p>
 
 					</div>
-						
+
 					<nav role="navigation" id="footer-menu">
 							<?php bones_footer_links(); ?>
 					</nav>

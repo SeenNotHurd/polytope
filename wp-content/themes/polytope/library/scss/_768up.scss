@@ -285,14 +285,12 @@ mobile. Make sure to double check these!
 */
 
 .footer-info,
-//.footer-info p,
 #footer-menu {
-	//display: inline-block;
 	width: 33%;
 	float: left;
 }
+
 .footer-nav {
-	margin: 1rem 0;
 		li {
 			float: none;
 			a {
@@ -306,6 +304,15 @@ mobile. Make sure to double check these!
 			ul {}
 		}
 } /* end .footer-nav */
+
+.home .footer-info {
+	width: 100%;
+	p {
+		margin: 0;
+		float: left;
+		padding-right: 1rem;
+	}
+}
 
 /*********************
 WOOOMMERCE STYLES

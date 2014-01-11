@@ -616,7 +616,7 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
-/* line 289, ../scss/_768up.scss */
+/* line 288, ../scss/_768up.scss */
 .footer-info,
 #footer-menu {
   width: 33%;
@@ -624,10 +624,6 @@ mobile. Make sure to double check these!
 }
 
 /* line 294, ../scss/_768up.scss */
-.footer-nav {
-  margin: 1rem 0;
-}
-/* line 296, ../scss/_768up.scss */
 .footer-nav li {
   float: none;
   /*
@@ -638,11 +634,22 @@ mobile. Make sure to double check these!
 }
 
 /* end .footer-nav */
+/* line 308, ../scss/_768up.scss */
+.home .footer-info {
+  width: 100%;
+}
+/* line 310, ../scss/_768up.scss */
+.home .footer-info p {
+  margin: 0;
+  float: left;
+  padding-right: 1rem;
+}
+
 /*********************
 WOOOMMERCE STYLES
 *********************/
 /* Header cart */
-/* line 316, ../scss/_768up.scss */
+/* line 323, ../scss/_768up.scss */
 #header-cart {
   padding-top: 2.5rem;
 }
