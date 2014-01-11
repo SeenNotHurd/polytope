@@ -161,11 +161,13 @@ function bones_wpsearch($form) {
 	return $form;
 } // don't remove this bracket!
 
-/* Woocommerce extras */
+/************* WOOCOMMERCE CHANGES *****************/
 
-/* Don't use the woocommerce CSS */
-
-// define('WOOCOMMERCE_USE_CSS', false); // Uncomment to not use the css included.
-
+function polytope_wc_removalist() {
+	remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
+	remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
+	remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
+}
+add_action( 'init', 'polytope_wc_removalist' );
 
 ?>
