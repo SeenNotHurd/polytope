@@ -19,7 +19,7 @@ body {
 	font-family: $body-font;
 	font-size: 100%;
 	line-height: 1.5;
-	//color: #565656;
+	color: $pt-dk-grey;
 	&.home {
 		color: $pt-hm-white;
 	}
@@ -183,7 +183,8 @@ HEADER STYLES
 *********************/
 
 .header {
-	margin: 1rem 0;
+	padding: 1rem 0;
+	border-bottom: 1px solid $pt-md-grey;
 }
 
 #logo {
@@ -830,10 +831,10 @@ FOOTER STYLES
 
 .footer {
 	clear: both;
+	border-top: 1px solid $pt-md-grey;
 }
 
 #inner-footer {
-	border-top: 1px solid $pt-md-grey;
 	padding: 1rem 0;
 }
 
