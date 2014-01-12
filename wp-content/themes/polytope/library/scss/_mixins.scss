@@ -60,9 +60,9 @@ $black:             #000;
 $white:             #fff;
 
 $pt-red:						rgb(255,52,16);
-$pt-dk-grey:				rgb(25,25,25);
-$pt-md-grey:				rgb(200,200,200);
-$pt-lt-grey:				rgb(180,180,180);
+$pt-dk-grey:				rgb(50,50,50);
+$pt-md-grey:				rgb(0,0,0);
+$pt-lt-grey:				rgb(150,150,150);
 $pt-hm-white:       $white;
 
 $home-color:        #eee;
@@ -84,12 +84,18 @@ use color variables properly:
 http://sachagreif.com/sass-color-variables/
 */
 
+/*********************
+OTHER VARIABLES
+*********************/
+
+// Transition duration time
+$transTime: 1s;
 
 /*********************
 TYPOGRAPHY
 *********************/
 
-$heading-font:        "lovelo", Helvetica, Arial, sans-serif;
+$heading-font:        "loveloblack", Helvetica, Arial, sans-serif;
 $body-font:     "aleo", Cambria, Times New Roman, Times, serif;
 
 
@@ -271,3 +277,5 @@ BUTTONS
   height: 1px; width: 1px; 
   margin: -1px; padding: 0; border: 0; 
 }
+
+@import "compass/css3"

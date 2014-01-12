@@ -163,11 +163,33 @@ function bones_wpsearch($form) {
 
 /************* WOOCOMMERCE CHANGES *****************/
 
-function polytope_wc_removalist() {
-	remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
-	remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
-	remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
-}
-add_action( 'init', 'polytope_wc_removalist' );
+// Remove things we don't want.
 
+// Breadcrumb
+remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
+// Result Count
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
+// Catalog sorting
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30);
+
+/* Changes to shop loop product layout. */
+
+/* Single products */
+
+// Remove add button from current location
+remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
+// Remove rating
+remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_rating', 5 );
+// Remove price 
+remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10 );
+// Remove thumbnail
+remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10 );
+// Remove sale flash
+remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_show_product_loop_sale_flash', 10 );
+
+function polytope_wc_add_slider_pager() {
+	echo 'boo';
+	get_template_part( 'woocommerce/shop-loop-image', 'pager' );
+}
+add_action( 'woocommerce_after_shop_loop', 'polytope_wc_add_slider_pager', 10 );
 ?>

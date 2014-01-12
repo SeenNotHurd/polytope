@@ -79,7 +79,21 @@ jQuery(document).ready(function($) {
 		debugMsg('clicked menu toggle');
 		$(".top-nav").toggleClass("collapsed").animate(3);
 		return false;
+	});
 
+	$('.products').slippry({
+    slideMargin: 100,
+    adaptHeight: false,
+    transition: "horizontal",
+    //useCSS: true,
+    pager: false,
+    auto: 0,
+    loop: false,
+    captions: false,
+    onSliderLoad: function () { // before page transition starts
+      $("body").addClass("loaded");
+      return this;
+    },
 	});
  
 }); /* end of as page load scripts */

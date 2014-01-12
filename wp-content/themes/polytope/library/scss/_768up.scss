@@ -323,3 +323,182 @@ WOOOMMERCE STYLES
 #header-cart {
 	padding-top: 2.5rem;
 }
+
+/* Shop loop single product */
+
+.products {
+	.product {
+		//width: 25%;
+	  margin: 1em auto;
+	}
+
+	.product-header {
+		width: 220%;
+	  margin-left: -60%;
+	  opacity: 0;
+	  @include single-transition(opacity, $transTime/3);
+	}
+
+	.product-title {
+		text-decoration: none;
+		h2 {
+			display: inline-block;
+		  font-size: 2em;
+		  margin: 0;
+		}
+	}
+
+	.button {
+		float: right;
+		margin: 0.5rem 0;
+	  height: 1.75rem;
+	}
+
+	.product-basics {
+		opacity: 0;
+		margin-left: -60%;
+	  float: left;
+	  font-family: "loveloblack";
+	  span {
+	  	display:block;
+	  	&.price {
+	  		font-size: 1.66em;
+	  		del {
+	  			display: none;
+	  		}
+	  		ins {
+	  			text-decoration: none;
+	  		}
+	  	}
+	  	&.onsale,
+	  	&.out-of-stock {
+	  		font-size: 1.33em;
+	  		color: red;
+	  	}
+	  }
+	  @include single-transition(opacity, $transTime/3);
+	}
+
+	.product-content {
+		margin-top: 1em;
+		position: relative;
+	}
+
+	.product-image {
+		.wp-post-image {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	.product-information {
+		position: absolute;
+		top: 0;
+		opacity: 0;
+	}
+
+	.more-information {
+		float: right;
+
+	}
+
+	.instock {
+		.out-of-stock {
+			display: none;
+		}
+	}
+
+	/* Changes when the product is the active slide. */
+	.sy-active {
+		.product-header,
+		.product-basics {
+			opacity: 1;
+			@include single-transition(opacity, $transTime/3, ease, 0.5s);
+		}
+		.product-image {
+			@include single-transition(opacity, $transTime/3);
+		}
+		.product-information {
+			@include single-transition(opacity, $transTime);
+		}
+		&:hover {
+			.product-image {
+				opacity: 0.4;
+				@include single-transition(opacity, $transTime);
+			}
+			.product-information {
+				opacity: 1;
+				@include single-transition(opacity, $transTime);
+			}	
+		}
+	}
+}
+
+.product-shortcuts {
+	margin: 0 auto;
+	.more-photos {
+		margin: 1rem 0;
+		display: inline-block;
+		clear: both;
+	}
+	.thumbnail-container {
+		border-top: 1px solid $pt-md-grey;
+		padding: 1rem 0;
+		display: inline-block;
+	}
+	.product-shortcut {
+		display: inline-block;
+		width: 10%;
+	}
+  //text-align: center;
+  // width: 96%;
+  // margin: 1em auto;
+  // .thumbnail-container {
+  //   display: inline-block;
+  //   max-width: 100%;
+  //   text-align: left;
+  // }
+  // .more-photos {
+  //   text-align: left;
+  //   border-bottom: 1px solid lighten($menu-color,40%);
+  //   padding-bottom: 0.4em;
+  //   margin-top: 0;
+  //   margin-bottom: 1em;
+  // }
+  // .product-shortcut {
+  //   display: inline-block;
+  //   width: 10%;
+  // }
+  // .wp-post-image {
+  //   max-width: 100%;
+  //   height: auto;
+  // }
+}
+
+/* Slippry modifications */
+
+.sy-box {
+	overflow: hidden;
+	.sy-slides-wrap {
+		width: 25%;
+		margin: 0 auto;
+		.sy-slides-crop {
+			overflow: visible;
+		}
+	}
+	.sy-controls {
+		li {
+			width: 80%;
+			&.sy-prev {
+				left: -155%;
+			}
+			&.sy-next {
+				right: -155%;
+			}
+			a:after {
+				background: none;
+			}
+		}
+	}
+}
+
