@@ -2552,54 +2552,65 @@ you can add resource intensive styles.
   }
 
   /* line 437, ../scss/_768up.scss */
-  .product-shortcuts {
-    margin: 0 auto;
+  .slider-pager-container {
+    text-align: center;
+    margin: 1em auto;
   }
-  /* line 439, ../scss/_768up.scss */
-  .product-shortcuts .more-photos {
-    margin: 1rem 0;
+  /* line 440, ../scss/_768up.scss */
+  .slider-pager-container .slider-pager {
     display: inline-block;
-    clear: both;
+    max-width: 100%;
+    text-align: left;
   }
-  /* line 444, ../scss/_768up.scss */
-  .product-shortcuts .thumbnail-container {
+  /* line 445, ../scss/_768up.scss */
+  .slider-pager-container .more-photos {
+    margin: 1rem 0;
+    clear: right;
+  }
+  /* line 450, ../scss/_768up.scss */
+  .slider-pager-container .thumbnail-container {
     border-top: 1px solid black;
     padding: 1rem 0;
     display: inline-block;
   }
-  /* line 449, ../scss/_768up.scss */
-  .product-shortcuts .product-shortcut {
+  /* line 455, ../scss/_768up.scss */
+  .slider-pager-container .product-shortcut {
     display: inline-block;
-    width: 10%;
+    width: 6rem;
+  }
+  /* line 459, ../scss/_768up.scss */
+  .slider-pager-container .wp-post-image {
+    max-width: 100%;
+    height: 100%;
   }
 
   /* Slippry modifications */
-  /* line 480, ../scss/_768up.scss */
+  /* line 490, ../scss/_768up.scss */
   .sy-box {
     overflow: hidden;
   }
-  /* line 482, ../scss/_768up.scss */
+  /* line 492, ../scss/_768up.scss */
   .sy-box .sy-slides-wrap {
     width: 25%;
     margin: 0 auto;
   }
-  /* line 485, ../scss/_768up.scss */
+  /* line 495, ../scss/_768up.scss */
   .sy-box .sy-slides-wrap .sy-slides-crop {
     overflow: visible;
   }
-  /* line 490, ../scss/_768up.scss */
+  /* line 500, ../scss/_768up.scss */
   .sy-box .sy-controls li {
     width: 80%;
   }
-  /* line 492, ../scss/_768up.scss */
+  /* line 502, ../scss/_768up.scss */
   .sy-box .sy-controls li.sy-prev {
     left: -155%;
   }
-  /* line 495, ../scss/_768up.scss */
+  /* line 505, ../scss/_768up.scss */
   .sy-box .sy-controls li.sy-next {
     right: -155%;
   }
-  /* line 498, ../scss/_768up.scss */
+  /* line 508, ../scss/_768up.scss */
   .sy-box .sy-controls li a:after {
     background: none;
   }
