@@ -335,32 +335,32 @@ WOOOMMERCE STYLES
 	.product-header {
 		width: 220%;
 	  margin-left: -60%;
-	  opacity: 0;
-	  @include single-transition(opacity, $transTime/3);
 	}
 
 	.product-title {
 		text-decoration: none;
 		h2 {
 			display: inline-block;
-		  font-size: 2em;
+		  font-size: 2.5em;
 		  margin: 0;
 		}
 	}
 
 	.button {
 		float: right;
-		margin: 0.5rem 0;
-	  height: 1.75rem;
+		margin-top: 0.7rem;
+		//display: none;
+		//margin: 0.5rem 0;
+	  //height: 1.75rem;
+	  //@include single-transition(opacity, $transTime);
 	}
 
 	.product-basics {
-		opacity: 0;
 		margin-left: -60%;
 	  float: left;
 	  font-family: "loveloblack";
 	  span {
-	  	display:block;
+	  	display: block;
 	  	&.price {
 	  		font-size: 1.66em;
 	  		del {
@@ -376,7 +376,14 @@ WOOOMMERCE STYLES
 	  		color: red;
 	  	}
 	  }
-	  @include single-transition(opacity, $transTime/3);
+	}
+
+	.product-header,
+	.product-basics {
+		visibility: hidden;
+	  opacity: 0;
+	  //@include single-transition(visibility, 0s, linear, $transTime/3);
+	  @include transition(visibility 0s linear $transTime/3, opacity $transTime/3 linear);
 	}
 
 	.product-content {
@@ -412,8 +419,15 @@ WOOOMMERCE STYLES
 	.sy-active {
 		.product-header,
 		.product-basics {
+			visibility: visible;
 			opacity: 1;
-			@include single-transition(opacity, $transTime/3, ease, 0.5s);
+			@include transition-delay(0s ,$transTime/3);
+			//@include transition(opacity $transTime/3 linear);
+			//@include single-transition(opacity, $transTime/3, ease, 0.5s);
+		}
+		.button {
+			//display: inline-block;
+			//@include single-transition(opacity, $transTime/3);
 		}
 		.product-image {
 			@include single-transition(opacity, $transTime/3);
@@ -443,7 +457,7 @@ WOOOMMERCE STYLES
 		text-align: left;
 	}
 	.more-photos {
-		margin: 1rem 0;
+		margin: 1rem 0 0.25rem;
 		//display: inline-block;
 		clear: right;
 	}

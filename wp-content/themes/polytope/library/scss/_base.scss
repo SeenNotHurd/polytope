@@ -25,6 +25,23 @@ body {
 	}
 }
 
+input {
+	-webkit-appearance: none;
+	&[type="submit"] {
+		background-color: $pt-red;
+		color: $white;
+		font-family: $heading-font;
+		border: 0;
+		padding: 0.25em 0.5em 0.15em;
+		line-height: 1.5;
+	}
+	&[type="text"] {
+		border: 1px solid $pt-md-grey;
+		outline: 0;
+		padding: 0.35em 0.5em 0.25em;
+	}
+}
+
 /********************
 WORDPRESS BODY CLASSES
 style a page via class
@@ -832,6 +849,9 @@ FOOTER STYLES
 .footer {
 	clear: both;
 	border-top: 1px solid $pt-md-grey;
+	p:first-child {
+		margin-top: 0;
+	}
 }
 
 #inner-footer {

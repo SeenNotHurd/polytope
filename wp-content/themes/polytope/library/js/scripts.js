@@ -81,7 +81,7 @@ jQuery(document).ready(function($) {
 		return false;
 	});
 
-	$('.products').slippry({
+	var thumbs = $('.products').slippry({
     slideMargin: 100,
     adaptHeight: false,
     transition: "horizontal",
@@ -94,6 +94,15 @@ jQuery(document).ready(function($) {
       $("body").addClass("loaded");
       return this;
     },
+    onSlideBefore: function (el, index_old, index_new) {
+	    $('.thumbnail-container a img').removeClass('active');
+	    $('img', $('.thumbnail-container a')[index_new]).addClass('active');
+	  }
+	});
+
+	$('.thumbnail-container a').click(function () {
+	  thumbs.goToSlide($(this).data('slide'));
+	  return false;
 	});
  
 }); /* end of as page load scripts */

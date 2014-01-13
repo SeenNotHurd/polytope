@@ -223,29 +223,30 @@ BUTTONS
 
 .button, .button:visited {
 	font-family: $heading-font;
-	border: 1px solid darken($link-color, 13%);
-	border-top-color: darken($link-color, 7%);
-	border-left-color: darken($link-color, 7%);
-	padding: 4px 12px;
+	//border: 1px solid darken($link-color, 13%);
+	//border-top-color: darken($link-color, 7%);
+	//border-left-color: darken($link-color, 7%);
+	padding: 0.25rem 0.5rem 0.15rem;
 	color: $white;
 	display: inline-block;
-	font-size: 11px;
+	font-size: 1rem;
 	font-weight: bold;
 	text-decoration: none;
-	text-shadow: 0 1px rgba(0,0,0, .75);
+	//text-shadow: 0 1px rgba(0,0,0, .75);
 	cursor: pointer;
-	margin-bottom: 20px;
-	line-height: 21px;
-	border-radius: 4px;
-	@include css-gradient($link-color, darken($link-color, 5%));
+	//margin-bottom: 20px;
+	line-height: 1.5;
+	//border-radius: 4px;
+	//@include css-gradient($link-color, darken($link-color, 5%));
+  background-color: $pt-red;
 
 
 	&:hover, &:focus {
 		color: $white;
-	  	border: 1px solid darken($link-color, 13%);
-	  	border-top-color: darken($link-color, 20%);
-	 	border-left-color: darken($link-color, 20%);
-		@include css-gradient(darken($link-color, 5%), darken($link-color, 10%));
+	 //  	border: 1px solid darken($link-color, 13%);
+	 //  	border-top-color: darken($link-color, 20%);
+	 // 	border-left-color: darken($link-color, 20%);
+		// @include css-gradient(darken($link-color, 5%), darken($link-color, 10%));
 	}
 
 	&:active {

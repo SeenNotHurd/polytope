@@ -3,10 +3,10 @@
 				<div id="inner-footer" class="wrap clearfix">
 
 					<div class="footer-info">
+						<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?></p>
 						<p class="email">info@polytope-seating.com</p>
 						<p class="phone">+358 466 30 9520</p>
 
-						<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?></p>
 
 					</div>
 
