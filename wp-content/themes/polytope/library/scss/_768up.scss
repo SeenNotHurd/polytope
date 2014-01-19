@@ -152,6 +152,31 @@ NAVIGATION STYLES
 } /* end .nav */
 
 /*********************
+POSTS & CONTENT STYLES
+*********************/
+
+.post {
+	.featured-image {
+		width: 50%;
+		float: right;
+		padding-left: 1%;
+		margin-top: 2em;
+	}
+}
+
+.article-header {
+	width: 50%;
+	padding-right: 1%;
+}
+.entry-content {
+	width: 50%;
+	padding-right: 1%;
+	p:first-child {
+		margin-top: 0;
+	}
+}
+
+/*********************
 SIDEBARS & ASIDES
 *********************/
 

@@ -104,6 +104,15 @@ jQuery(document).ready(function($) {
 	  thumbs.goToSlide($(this).data('slide'));
 	  return false;
 	});
+
+	$("#images").swipe( {
+    swipeLeft:function(event, direction, distance, duration, fingerCount) {
+      slippry.goToNextSlide();
+    },
+    swipeRight:function(event, direction, distance, duration, fingerCount) {
+      slippry.goToPrevSlide();
+    }
+  });
  
 }); /* end of as page load scripts */
 

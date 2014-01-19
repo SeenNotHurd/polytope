@@ -551,30 +551,57 @@ NAVIGATION STYLES
 
 /* end .nav */
 /*********************
+POSTS & CONTENT STYLES
+*********************/
+/* line 159, ../scss/_768up.scss */
+.post .featured-image {
+  width: 50%;
+  float: right;
+  padding-left: 1%;
+  margin-top: 2em;
+}
+
+/* line 167, ../scss/_768up.scss */
+.article-header {
+  width: 50%;
+  padding-right: 1%;
+}
+
+/* line 171, ../scss/_768up.scss */
+.entry-content {
+  width: 50%;
+  padding-right: 1%;
+}
+/* line 174, ../scss/_768up.scss */
+.entry-content p:first-child {
+  margin-top: 0;
+}
+
+/*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 158, ../scss/_768up.scss */
+/* line 183, ../scss/_768up.scss */
 .sidebar {
   margin-top: 2.2em;
 }
 
-/* line 162, ../scss/_768up.scss */
+/* line 187, ../scss/_768up.scss */
 .widgettitle {
   border-bottom: 2px solid #444;
   margin-bottom: 0.75em;
 }
 
-/* line 167, ../scss/_768up.scss */
+/* line 192, ../scss/_768up.scss */
 .widget {
   padding: 0 10px;
   margin: 2.2em 0;
 }
-/* line 172, ../scss/_768up.scss */
+/* line 197, ../scss/_768up.scss */
 .widget ul li {
   margin-bottom: 0.75em;
   /* deep nesting */
 }
-/* line 180, ../scss/_768up.scss */
+/* line 205, ../scss/_768up.scss */
 .widget ul li ul {
   margin-top: 0.75em;
   padding-left: 1em;
@@ -599,14 +626,14 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
-/* line 288, ../scss/_768up.scss */
+/* line 313, ../scss/_768up.scss */
 .footer-info,
 #footer-menu {
   width: 33%;
   float: left;
 }
 
-/* line 294, ../scss/_768up.scss */
+/* line 319, ../scss/_768up.scss */
 .footer-nav li {
   float: none;
   /*
@@ -617,11 +644,11 @@ mobile. Make sure to double check these!
 }
 
 /* end .footer-nav */
-/* line 308, ../scss/_768up.scss */
+/* line 333, ../scss/_768up.scss */
 .home .footer-info {
   width: 100%;
 }
-/* line 310, ../scss/_768up.scss */
+/* line 335, ../scss/_768up.scss */
 .home .footer-info p {
   margin: 0;
   float: left;
@@ -632,68 +659,68 @@ mobile. Make sure to double check these!
 WOOOMMERCE STYLES
 *********************/
 /* Header cart */
-/* line 323, ../scss/_768up.scss */
+/* line 348, ../scss/_768up.scss */
 #header-cart {
   padding-top: 2.5rem;
 }
 
 /* Shop loop single product */
-/* line 329, ../scss/_768up.scss */
+/* line 354, ../scss/_768up.scss */
 .products {
   /* Changes when the product is the active slide. */
 }
-/* line 330, ../scss/_768up.scss */
+/* line 355, ../scss/_768up.scss */
 .products .product {
   margin: 1em auto;
 }
-/* line 335, ../scss/_768up.scss */
+/* line 360, ../scss/_768up.scss */
 .products .product-header {
   width: 220%;
   margin-left: -60%;
 }
-/* line 340, ../scss/_768up.scss */
+/* line 365, ../scss/_768up.scss */
 .products .product-title {
   text-decoration: none;
 }
-/* line 342, ../scss/_768up.scss */
+/* line 367, ../scss/_768up.scss */
 .products .product-title h2 {
   display: inline-block;
   font-size: 2.5em;
   margin: 0;
 }
-/* line 349, ../scss/_768up.scss */
+/* line 374, ../scss/_768up.scss */
 .products .button {
   float: right;
   margin-top: 0.7rem;
 }
-/* line 358, ../scss/_768up.scss */
+/* line 383, ../scss/_768up.scss */
 .products .product-basics {
   margin-left: -60%;
   float: left;
   font-family: "loveloblack";
 }
-/* line 362, ../scss/_768up.scss */
+/* line 387, ../scss/_768up.scss */
 .products .product-basics span {
   display: block;
 }
-/* line 364, ../scss/_768up.scss */
+/* line 389, ../scss/_768up.scss */
 .products .product-basics span.price {
   font-size: 1.66em;
 }
-/* line 366, ../scss/_768up.scss */
+/* line 391, ../scss/_768up.scss */
 .products .product-basics span.price del {
   display: none;
 }
-/* line 369, ../scss/_768up.scss */
+/* line 394, ../scss/_768up.scss */
 .products .product-basics span.price ins {
   text-decoration: none;
 }
-/* line 374, ../scss/_768up.scss */
+/* line 399, ../scss/_768up.scss */
 .products .product-basics span.onsale, .products .product-basics span.out-of-stock {
   font-size: 1.33em;
   color: red;
 }
-/* line 382, ../scss/_768up.scss */
+/* line 407, ../scss/_768up.scss */
 .products .product-header,
 .products .product-basics {
   visibility: hidden;
@@ -704,31 +731,31 @@ WOOOMMERCE STYLES
   -o-transition: visibility 0s linear 0.33333s, opacity 0.33333s linear;
   transition: visibility 0s linear 0.33333s, opacity 0.33333s linear;
 }
-/* line 389, ../scss/_768up.scss */
+/* line 414, ../scss/_768up.scss */
 .products .product-content {
   margin-top: 1em;
   position: relative;
 }
-/* line 395, ../scss/_768up.scss */
+/* line 420, ../scss/_768up.scss */
 .products .product-image .wp-post-image {
   width: 100%;
   height: auto;
 }
-/* line 401, ../scss/_768up.scss */
+/* line 426, ../scss/_768up.scss */
 .products .product-information {
   position: absolute;
   top: 0;
   opacity: 0;
 }
-/* line 407, ../scss/_768up.scss */
+/* line 432, ../scss/_768up.scss */
 .products .more-information {
   float: right;
 }
-/* line 413, ../scss/_768up.scss */
+/* line 438, ../scss/_768up.scss */
 .products .instock .out-of-stock {
   display: none;
 }
-/* line 421, ../scss/_768up.scss */
+/* line 446, ../scss/_768up.scss */
 .products .sy-active .product-header,
 .products .sy-active .product-basics {
   visibility: visible;
@@ -738,21 +765,21 @@ WOOOMMERCE STYLES
   -o-transition-delay: 0s, 0.33333s;
   transition-delay: 0s, 0.33333s;
 }
-/* line 432, ../scss/_768up.scss */
+/* line 457, ../scss/_768up.scss */
 .products .sy-active .product-image {
   -webkit-transition: opacity 0.33333s;
   -moz-transition: opacity 0.33333s;
   -o-transition: opacity 0.33333s;
   transition: opacity 0.33333s;
 }
-/* line 435, ../scss/_768up.scss */
+/* line 460, ../scss/_768up.scss */
 .products .sy-active .product-information {
   -webkit-transition: opacity 1s;
   -moz-transition: opacity 1s;
   -o-transition: opacity 1s;
   transition: opacity 1s;
 }
-/* line 439, ../scss/_768up.scss */
+/* line 464, ../scss/_768up.scss */
 .products .sy-active:hover .product-image {
   opacity: 0.4;
   -webkit-transition: opacity 1s;
@@ -760,7 +787,7 @@ WOOOMMERCE STYLES
   -o-transition: opacity 1s;
   transition: opacity 1s;
 }
-/* line 443, ../scss/_768up.scss */
+/* line 468, ../scss/_768up.scss */
 .products .sy-active:hover .product-information {
   opacity: 1;
   -webkit-transition: opacity 1s;
@@ -769,66 +796,66 @@ WOOOMMERCE STYLES
   transition: opacity 1s;
 }
 
-/* line 451, ../scss/_768up.scss */
+/* line 476, ../scss/_768up.scss */
 .slider-pager-container {
   text-align: center;
   margin: 1em auto;
 }
-/* line 454, ../scss/_768up.scss */
+/* line 479, ../scss/_768up.scss */
 .slider-pager-container .slider-pager {
   display: inline-block;
   max-width: 100%;
   text-align: left;
 }
-/* line 459, ../scss/_768up.scss */
+/* line 484, ../scss/_768up.scss */
 .slider-pager-container .more-photos {
   margin: 1rem 0 0.25rem;
   clear: right;
 }
-/* line 464, ../scss/_768up.scss */
+/* line 489, ../scss/_768up.scss */
 .slider-pager-container .thumbnail-container {
   border-top: 1px solid black;
   padding: 1rem 0;
   display: inline-block;
 }
-/* line 469, ../scss/_768up.scss */
+/* line 494, ../scss/_768up.scss */
 .slider-pager-container .product-shortcut {
   display: inline-block;
   width: 6rem;
 }
-/* line 473, ../scss/_768up.scss */
+/* line 498, ../scss/_768up.scss */
 .slider-pager-container .wp-post-image {
   max-width: 100%;
   height: 100%;
 }
 
 /* Slippry modifications */
-/* line 504, ../scss/_768up.scss */
+/* line 529, ../scss/_768up.scss */
 .sy-box {
   overflow: hidden;
 }
-/* line 506, ../scss/_768up.scss */
+/* line 531, ../scss/_768up.scss */
 .sy-box .sy-slides-wrap {
   width: 25%;
   margin: 0 auto;
 }
-/* line 509, ../scss/_768up.scss */
+/* line 534, ../scss/_768up.scss */
 .sy-box .sy-slides-wrap .sy-slides-crop {
   overflow: visible;
 }
-/* line 514, ../scss/_768up.scss */
+/* line 539, ../scss/_768up.scss */
 .sy-box .sy-controls li {
   width: 80%;
 }
-/* line 516, ../scss/_768up.scss */
+/* line 541, ../scss/_768up.scss */
 .sy-box .sy-controls li.sy-prev {
   left: -155%;
 }
-/* line 519, ../scss/_768up.scss */
+/* line 544, ../scss/_768up.scss */
 .sy-box .sy-controls li.sy-next {
   right: -155%;
 }
-/* line 522, ../scss/_768up.scss */
+/* line 547, ../scss/_768up.scss */
 .sy-box .sy-controls li a:after {
   background: none;
 }

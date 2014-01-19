@@ -334,6 +334,11 @@ POSTS & CONTENT STYLES
 #content {
 	//margin-top: 2.2em;
 }
+	
+		.featured-image img {
+			max-width: 100%;
+			height: auto;
+		}
 
 		.hentry {
 
@@ -346,7 +351,9 @@ POSTS & CONTENT STYLES
 		.single-title,
 		.page-title {}
 
-		.single-title {}
+		.single-title {
+			border-bottom: 1px solid #555;
+		}
 
 		.page-title {}
 

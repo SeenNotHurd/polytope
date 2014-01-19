@@ -48,7 +48,8 @@ require_once( 'library/custom-post-type.php' ); // you can disable this if you l
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes
-add_image_size( 'bones-thumb-600', 600, 150, true );
+add_image_size( 'bones-thumb-900', 900, 900, true );
+add_image_size( 'bones-thumb-600', 600, 600, true );
 add_image_size( 'bones-thumb-300', 300, 100, true );
 /*
 to add more sizes, simply copy a line from above
@@ -191,4 +192,13 @@ function polytope_wc_add_slider_pager() {
 	get_template_part( 'woocommerce/shop-loop-image', 'pager' );
 }
 add_action( 'woocommerce_after_shop_loop', 'polytope_wc_add_slider_pager', 10 );
+
+function polytope_hide_shop_title() {
+ 	if(is_shop()) {
+ 		return false;
+ 	} else {
+	return true;
+ 	}
+}
+add_filter( 'woocommerce_show_page_title', 'polytope_hide_shop_title', 10, 1 );
 ?>
