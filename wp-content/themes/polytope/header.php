@@ -39,7 +39,15 @@
 
 	</head>
 
-	<body <?php body_class(); ?>>
+	<?php 
+		if(is_page() && has_post_thumbnail() ) { 
+			$full_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
+			$bg_image = 'background-image: url(' . $full_image_url[0] . ');';
+		  $inverse_class = 'inverse';
+		 } 
+	?>
+
+	<body <?php body_class($inverse_class); ?> style="<?php echo $bg_image; ?>">
 
 		<div id="container">
 
@@ -47,7 +55,7 @@
 
 				<div id="inner-header" class="wrap clearfix">
 
-					<?php if(is_home()) { $logoColour = 'home'; } else { $logoColour = 'regular'; } ?>
+					<?php if($inverse_class) { $logoColour = 'inverse'; } else { $logoColour = 'regular'; } ?>
 					<a id="site-branding" href="<?php echo home_url(); ?>" rel="nofollow"><img id="logo" src="<?php echo get_template_directory_uri(). '/library/images/polytope-' . $logoColour . '.svg'; ?>"><h1 id="blog-name"><?php bloginfo('name'); ?></h1></a>
 
 					<?php // if you'd like to use the site description you can un-comment it below ?>

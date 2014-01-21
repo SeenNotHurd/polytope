@@ -14,7 +14,6 @@
 
 									<h2 class="page-title" itemprop="headline"><?php the_title(); ?></h2>
 
-
 								</header>
 
 								<section class="entry-content clearfix" itemprop="articleBody">
@@ -43,7 +42,7 @@
 
 						</div>
 
-						<?php get_sidebar(); ?>
+						<?php //get_sidebar(); ?>
 
 				</div>
 

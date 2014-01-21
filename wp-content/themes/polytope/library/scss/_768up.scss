@@ -155,26 +155,40 @@ NAVIGATION STYLES
 POSTS & CONTENT STYLES
 *********************/
 
-.post {
-	.featured-image {
-		width: 50%;
-		float: right;
-		padding-left: 1%;
-		margin-top: 2em;
+.hentry {
+	header {
+		margin: 1.75em 0 1.5em;
 	}
 }
 
-.article-header {
-	width: 50%;
-	padding-right: 1%;
-}
-.entry-content {
-	width: 50%;
-	padding-right: 1%;
-	p:first-child {
-		margin-top: 0;
+.post {
+	.featured-image {
+	  width: 50%;
+		float: right;
+		padding-left: 1%;
+	// 	margin-top: 2em;
+	}
+
+	.entry-content {
+		width: 50%;
+		padding-right: 1%;
 	}
 }
+
+.page { // Page with a background image. Requires inverse colours.
+	&.inverse { 
+		.hentry {
+			width: 40%;
+			margin: 5%;
+		}
+	}
+}
+
+/*********************
+PAGE STYLES
+*********************/
+
+
 
 /*********************
 SIDEBARS & ASIDES

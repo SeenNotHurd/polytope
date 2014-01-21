@@ -15,19 +15,27 @@ and will be used across all viewports.
 GENERAL STYLES
 *********************/
 
+html {
+	height: 100%;
+}
+
 body {
 	font-family: $body-font;
 	font-size: 100%;
 	line-height: 1.5;
 	color: $pt-md-grey;
+	height: 100%;
 	&.home {
-		color: $pt-hm-white;
+		//color: $pt-hm-white;
 	}
 }
 
+/* Form elements */
+
 input {
 	-webkit-appearance: none;
-	&[type="submit"] {
+	&[type="submit"],
+	&[type="reset"] {
 		background-color: $pt-red;
 		color: $white;
 		font-family: $heading-font;
@@ -39,16 +47,18 @@ input {
 		border: 1px solid $pt-md-grey;
 		outline: 0;
 		padding: 0.35em 0.5em 0.25em;
+		&:focus {
+			border-color: $pt-red;
+		}
 	}
 }
-
 /********************
 WORDPRESS BODY CLASSES
 style a page via class
 ********************/
 
 .rtl {}                           /* for sites that are read right to left (i.e. hebrew) */
-body { /* home page */
+.home { /* home page */
 
 }
 
@@ -91,7 +101,7 @@ LAYOUT & GRID STYLES
 *********************/
 
 .wrap {
-	width: 96%;
+	//width: 96%;
 	margin: 0 auto;
 }
 
@@ -123,31 +133,31 @@ a, a:visited {
 	}
 }
 
-.home {
-	a, a:visited {
-		color: $pt-hm-white;
+// .home {
+// 	a, a:visited {
+// 		color: $pt-hm-white;
 
-		/* on hover */
-		&:hover, &:focus {
-			color: darken($pt-hm-white, 9%);
-		}
+// 		/* on hover */
+// 		&:hover, &:focus {
+// 			color: darken($pt-hm-white, 9%);
+// 		}
 
-		/* on click */
-		&:active {
+// 		/* on click */
+// 		&:active {
 
-		}
+// 		}
 
-		/* mobile tap color */
-		&:link {
-			/*
-			this highlights links on iPhones/iPads.
-			so it basically works like the :hover selector
-			for mobile devices.
-			*/
-			-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
-		}
-	}
-}
+// 		/* mobile tap color */
+// 		&:link {
+// 			/*
+// 			this highlights links on iPhones/iPads.
+// 			so it basically works like the :hover selector
+// 			for mobile devices.
+// 			*/
+// 			-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
+// 		}
+// 	}
+// }
 
 /******************************************************************
 H1, H2, H3, H4, H5 STYLES
@@ -169,22 +179,22 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 }
 
 h1, .h1 {
-	font-size: 2.5em;
-	line-height: 1.333em;
+	font-size: 2em;
+	line-height: 1em;
 }
 
 h2, .h2 {
-	font-size: 1.75em;
-	line-height: 1.4em;
-	margin-bottom: 0.375em;
+	font-size: 1.667em;
+	line-height: 1em;
+	margin: 0;
 }
 
 h3, .h3 {
-	font-size: 1.125em;
+	font-size: 1em;
 }
 
 h4, .h4 {
-	font-size: 1.1em;
+	font-size: 1em;
 	font-weight: 700;
 }
 
@@ -217,8 +227,7 @@ HEADER STYLES
 
 // Homepage specific changes.
 body.home {
-	background-color: $pt-dk-grey; //temp
-	//color: $pt-hm-white;
+
 }
 
 /*********************
@@ -241,7 +250,7 @@ NAVIGATION STYLES
 .home {
 	#menu-toggle {
 		span {
-			background-color: $pt-hm-white;
+			//background-color: $pt-hm-white;
 		}
 	}
 }
@@ -256,8 +265,10 @@ and more scalable.
 
 .nav {
 	border-top: 1px solid #ccc;
+	//font-family: $heading-font;
 	
 	li {
+		list-style: none;
 		a {
 			display: block;
 			text-decoration: none;
@@ -335,14 +346,19 @@ POSTS & CONTENT STYLES
 	//margin-top: 2.2em;
 }
 	
-		.featured-image img {
-			max-width: 100%;
-			height: auto;
+		.featured-image {
+			margin: 1em 0;
+			img {
+				max-width: 100%;
+				height: auto;
+			}
 		}
 
 		.hentry {
 
-			header {}
+			header {
+				margin: 1.5em 0;
+			}
 
 			footer {}
 
@@ -352,7 +368,7 @@ POSTS & CONTENT STYLES
 		.page-title {}
 
 		.single-title {
-			border-bottom: 1px solid #555;
+			margin: 0;
 		}
 
 		.page-title {}
@@ -362,7 +378,8 @@ POSTS & CONTENT STYLES
 		/* want to style individual post classes? Booya! */
 		.post-id {}         /* post by id (i.e. post-3) */
 		.post {}            /* general post style */
-		.page {}            /* general article on a page style */
+		.page {            /* general article on a page style */
+		}
 		.attachment {}      /* general style on an attatchment */
 		.sticky {}          /* sticky post style */
 		.hentry {}          /* hentry class */
@@ -371,7 +388,8 @@ POSTS & CONTENT STYLES
 
 		/* post meta */
 		.byline {
-			color: #999;
+			color: $pt-lt-grey;
+			margin: 0;
 
 			time {}
 		}
@@ -379,7 +397,11 @@ POSTS & CONTENT STYLES
 		/* entry content */
 		.entry-content {
 
-			p {}
+			p {
+				&:first-child {
+					margin-top: 0;
+				}
+			}
 
 
 			ul, ol, table, dl {}
@@ -492,6 +514,26 @@ POSTS & CONTENT STYLES
 		.size-large {}
 		.size-medium {}
 		.size-thumbnail {}
+
+.page { 
+	&.inverse { // Page with a background image. Requires inverse colours.
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+
+		.hentry {
+			background-color: rgba(255,255,255,0.8);//$white;
+			padding: 0 1em;
+			margin: 1em;
+		}
+	}
+	&.home {
+		.hentry {
+			display: none;
+		}
+	}
+}
+
 
 /******************************************************************
 PAGE NAVI STYLES
@@ -856,18 +898,28 @@ FOOTER STYLES
 .footer {
 	clear: both;
 	border-top: 1px solid $pt-md-grey;
-	p:first-child {
-		margin-top: 0;
+	p {
+		margin: 0;
 	}
 }
+
+/* when a page with bg image */
+// .bg-image {
+// 	.footer {
+// 		position: absolute;
+// 		bottom: 0;
+// 		left: 0;
+// 		right: 0;
+// 	}
+// }
 
 #inner-footer {
 	padding: 1rem 0;
 }
 
-.email, .phone {
-	margin: 0;
-}
+// .email, .phone {
+// 	margin: 0;
+// }
 	/*
 	if you checked out the link above:
 	http://www.alistapart.com/articles/organizing-mobile/
