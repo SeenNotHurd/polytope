@@ -19,9 +19,11 @@
 
 								</header>
 
-								<div class="featured-image">
-									<?php if(has_post_thumbnail() ) { the_post_thumbnail( 'bones-thumb-600'/* $size, $attr*/ ); } ?>
-								</div>
+								<?php if( has_post_thumbnail() ) { ?>
+									<div class="featured-image">
+										 <?php the_post_thumbnail( 'bones-thumb-600' ); ?>
+									</div>
+								<?php } ?>
 
 								<section class="entry-content clearfix" itemprop="articleBody">
 									<?php the_content(); ?>
