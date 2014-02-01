@@ -32,10 +32,10 @@ if (WP_ENV == 'development') {
     define('DB_PASSWORD', 'polytope_password');
     define('DB_HOST', 'localhost');
 } else {
-    define('DB_NAME', 'polytope');
-    define('DB_USER', 'polytope');
-    define('DB_PASSWORD', 'polytope_password');
-    define('DB_HOST', 'localhost');
+    define('DB_NAME', 'u498889504_ptdb');
+    define('DB_USER', 'u498889504_puts');
+    define('DB_PASSWORD', '5eSbQCJ2mC');
+    define('DB_HOST', 'mysql.2freehosting.com');
 } 
 
 // ** MySQL settings - You can get this info from your web host ** //
