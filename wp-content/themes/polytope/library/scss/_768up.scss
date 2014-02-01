@@ -39,7 +39,7 @@ HEADER STYLES
 
 #main-menu {
 	display: inline-block;
-	padding-top: 2rem;
+	vertical-align: bottom;
 }
 
 /*********************
@@ -53,15 +53,13 @@ NAVIGATION STYLES
 .nav {
 	margin: 0;
 	border: 0;
-
-	ul {
-		margin-top: 0;
-	}
 	li {
 		float: left;
 		position: relative;
+		border-top: 0;
 
 		a {
+			padding-bottom: 0.15em;
 			border-bottom: 0;
 
 			/*
@@ -81,22 +79,22 @@ NAVIGATION STYLES
 		*/
 		ul.sub-menu,
 		ul.children {
-			margin-top: 0;
-			border: 1px solid #ccc;
-			border-top: 0;
-			position: absolute;
-			overflow: hidden;
-			visibility: hidden;
-			z-index: 8999;
+			// margin-top: 0;
+			// border: 1px solid #ccc;
+			// border-top: 0;
+			// position: absolute;
+			// overflow: hidden;
+			// visibility: hidden;
+			// z-index: 8999;
 
 			li {
 
 				a {
-					padding-left: 10px;
-					border-right: 0;
-					display: block;
-					width: 180px;
-					border-bottom: 1px solid #ccc;
+					// padding-left: 10px;
+					// border-right: 0;
+					// display: block;
+					// width: 180px;
+					// border-bottom: 1px solid #ccc;
 
 					&:hover,
 					&:focus {}
@@ -125,7 +123,9 @@ NAVIGATION STYLES
 			li.current-menu-item,
 			li.current_page_item,
 			li.current-page-ancestor {
-				a {}
+				a {
+
+				}
 			}
 		}
 
@@ -142,7 +142,9 @@ NAVIGATION STYLES
 	li.current-menu-item,
 	li.current_page_item,
 	li.current-page-ancestor {
-		a {}
+		a {
+			padding-bottom: 0.25em;
+		}
 	}  /* end current highlighters */
 
 	&.collapsed {
@@ -150,6 +152,36 @@ NAVIGATION STYLES
 	}
 
 } /* end .nav */
+
+/* Styles for inverse page */
+.inverse {
+	#menu-toggle {
+		span {
+			background-color: $pt-hm-white;
+		}
+	}
+
+	.nav {	
+		li {
+			border-top: 0;
+			a {
+			
+				color: $pt-hm-white;
+			}
+		}
+
+		li.current-menu-item,
+		li.current_page_item,
+		li.current-page-ancestor {
+
+			a {
+				//border-bottom: 2px solid $pt-hm-white;
+			}
+		}
+
+	} /* end .nav */
+
+}
 
 /*********************
 POSTS & CONTENT STYLES

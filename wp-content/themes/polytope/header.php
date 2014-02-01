@@ -83,10 +83,6 @@
 						<?php bones_main_nav(); ?>
 					</nav>
 
-					
- 
-					
-
 				</div>
 
 			</header>
