@@ -34,7 +34,7 @@
 
 								</footer>
 
-								<?php comments_template(); ?>
+								<?php //comments_template(); ?>
 
 							</article>
 
@@ -58,7 +58,7 @@
 
 					</div>
 
-					<?php get_sidebar(); ?>
+					<?php //get_sidebar(); ?>
 
 				</div>
 

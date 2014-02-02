@@ -15,20 +15,29 @@ and will be used across all viewports.
 GENERAL STYLES
 *********************/
 
-html {
-	height: 100%;
-}
-
 body {
 	font-family: $body-font;
 	font-size: 100%;
 	line-height: 1.5;
-	color: $pt-md-grey;
-	height: 100%;
-	&.home {
-		//color: $pt-hm-white;
+	color: $pt-dk-grey;
+}
+
+
+.debug-note {
+	display: none;
+}
+
+.admin-bar {
+	.debug-note {
+		position: absolute;
+		top: 46px;
+		right: 0;
+		background-color: red;
+		color: $white;
+		display: inline-block;
 	}
 }
+
 
 /* Form elements */
 
@@ -43,14 +52,32 @@ input {
 		padding: 0.25em 0.5em 0.15em;
 		line-height: 1.5;
 	}
-	&[type="text"] {
-		border: 1px solid $pt-md-grey;
+	&[type="text"],
+	&[type="email"] {
+		border: 1px solid $pt-lt-grey;
 		outline: 0;
 		padding: 0.35em 0.5em 0.25em;
+		max-width: 100%;
 		&:focus {
-			border-color: $pt-red;
+			@include transition(border-color 1s);
+			border-color: $pt-dk-grey;
 		}
 	}
+}
+
+textarea {
+	border: 1px solid $pt-lt-grey;
+	outline: 0;
+	padding: 0.35em 0.5em 0.25em;
+	max-width: 100%;
+	&:focus {
+		@include transition(border-color 1s);
+		border-color: $pt-dk-grey;
+	}
+}
+
+select {
+	outline: 0;
 }
 /********************
 WORDPRESS BODY CLASSES
@@ -101,7 +128,7 @@ LAYOUT & GRID STYLES
 *********************/
 
 .wrap {
-	//width: 96%;
+	width: 96%;
 	margin: 0 auto;
 }
 
@@ -167,6 +194,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 	font-family: $heading-font;
 	text-rendering: optimizelegibility;
 	font-weight: 800;
+	color: $pt-dk-grey;
 	/*
 	if you're going to use webfonts, be sure to check your weights
 	http://css-tricks.com/watch-your-font-weight/
@@ -210,13 +238,17 @@ HEADER STYLES
 *********************/
 
 .header {
-	//padding: 1rem 0;
 	border-bottom: 1px solid $pt-dk-grey;
+	//padding: 0 0.7rem;
+}
+
+#inner-header {
 }
 
 #logo {
 	max-height: 5rem;
 	padding: 0.7rem;
+	padding-left: 0;
 	vertical-align: top;
 	margin-right: 1rem;
 }
@@ -227,9 +259,10 @@ HEADER STYLES
 
 /* Inverse styling */
 
-.inverse {
+.colouring-light {
 	.header {
 		border-bottom-color: $pt-hm-white;
+		color: $pt-hm-white;
 		background-color: rgba(255,255,255,0.1);
 	}
 }
@@ -262,13 +295,11 @@ and more scalable.
 */
 
 .nav {
-	font-family: $heading-font;
 	margin: 0;
 	
 	li {
 		list-style: none;
 		display: block;
-		border-top: 1px solid $pt-dk-grey;
 		a {
 			display: inline-block;
 			text-decoration: none;
@@ -330,8 +361,6 @@ and more scalable.
 	li.current-page-ancestor {
 
 		a {
-			border-bottom: 2px solid $pt-dk-grey;
-			padding-bottom: 0.45rem;
 		}
 
 	}  /* end current highlighters */
@@ -342,8 +371,31 @@ and more scalable.
 
 } /* end .nav */
 
-/* Styles for inverse page */
-.inverse {
+
+/* Specific styles for header menu */
+.top-nav {
+	font-family: $heading-font;
+
+	li {
+		border-top: 1px solid $pt-dk-grey;
+	}
+
+		/* highlight current page */
+	li.current-menu-item,
+	li.current_page_item,
+	li.current-page-ancestor {
+
+		a {
+			border-bottom: 2px solid $pt-dk-grey;
+			padding-bottom: 0.45rem;
+		}
+
+	}  /* end current highlighters */
+}
+
+
+/* Styles for light colour page */
+.colouring-light {
 	#menu-toggle {
 		span {
 			background-color: $pt-hm-white;
@@ -352,7 +404,7 @@ and more scalable.
 
 	.nav {	
 		li {
-			border-top: 1px solid $pt-hm-white;
+			border-top-color: $pt-hm-white;
 			a {
 			
 				color: $pt-hm-white;
@@ -364,7 +416,7 @@ and more scalable.
 		li.current-page-ancestor {
 
 			a {
-				border-bottom: 2px solid $pt-hm-white;
+				border-bottom-color: $pt-hm-white;
 			}
 		}
 
@@ -422,7 +474,7 @@ POSTS & CONTENT STYLES
 
 		/* post meta */
 		.byline {
-			color: $pt-lt-grey;
+			color: $pt-md-grey;
 			margin: 0;
 
 			time {}
@@ -550,7 +602,7 @@ POSTS & CONTENT STYLES
 		.size-thumbnail {}
 
 .page { 
-	&.inverse { // Page with a background image. Requires inverse colours.
+	&.bg-image { // Page with a background image. 
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center center;
@@ -561,11 +613,7 @@ POSTS & CONTENT STYLES
 			margin: 1em;
 		}
 	}
-	&.home {
-		.hentry {
-			display: none;
-		}
-	}
+	
 }
 
 
@@ -931,29 +979,16 @@ FOOTER STYLES
 
 .footer {
 	clear: both;
-	border-top: 1px solid $pt-md-grey;
+	border-top: 1px solid $pt-dk-grey;
 	p {
 		margin: 0;
 	}
 }
 
-/* when a page with bg image */
-// .bg-image {
-// 	.footer {
-// 		position: absolute;
-// 		bottom: 0;
-// 		left: 0;
-// 		right: 0;
-// 	}
-// }
-
 #inner-footer {
-	padding: 1rem 0;
+	padding: 0.7rem 0;
 }
 
-// .email, .phone {
-// 	margin: 0;
-// }
 	/*
 	if you checked out the link above:
 	http://www.alistapart.com/articles/organizing-mobile/
@@ -966,11 +1001,14 @@ FOOTER STYLES
 	.footer-nav {
 		border-top: 0;
 		margin: 0;
+		margin-top: 0.7rem;
 
 			li {
+
 				a {
 					border: 0;
 					padding: 0;
+					margin: 0;
 				}
 			}
 
@@ -980,11 +1018,40 @@ FOOTER STYLES
 
 	.copyright {}
 
-.home {
-	.footer-nav {
-		@include visuallyhidden;
+#footer-menu {
+	display: none;
+}
+
+.colouring-light {
+	.footer {
+		border-top-color: $pt-hm-white;
+		background-color: rgba(255,255,255,0.1);
+		color: $pt-hm-white;
 	}
 }
+
+.footer-bottom {
+	.footer {
+
+		//position the footer absolutely at the bottom of the page
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+}
+
+/*********************
+CONTACT PAGE TEMPLATE STYLES
+*********************/
+
+.page-contact-form-php {
+	.entry-content,
+	.contact-form {
+
+	}
+}
+
 /*********************
 WOOOMMERCE STYLES
 *********************/
@@ -1002,7 +1069,7 @@ WOOOMMERCE STYLES
 
 /* Inverse styling */
 
-.inverse {
+.colouring-light {
 	#header-cart {
 		color: $pt-hm-white;
 	}

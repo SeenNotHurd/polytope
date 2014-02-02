@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Custom Page Example
+Template Name: Contact form
 */
 ?>
 
@@ -19,9 +19,7 @@ Template Name: Custom Page Example
 								<header class="article-header">
 
 									<h1 class="page-title"><?php the_title(); ?></h1>
-									<p class="byline vcard"><?php
-										printf( __( 'Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span>.', 'bonestheme' ), get_the_time( 'Y-m-j' ), get_the_time( __( 'F jS, Y', 'bonestheme' ) ), bones_get_the_author_posts_link() );
-									?></p>
+								
 
 
 								</header>
@@ -29,7 +27,7 @@ Template Name: Custom Page Example
 								<section class="entry-content clearfix" itemprop="articleBody">
 									<?php the_content(); ?>
 								</section>
-
+								
 								<footer class="article-footer">
 									<p class="clearfix"><?php the_tags( '<span class="tags">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '' ); ?></p>
 
@@ -38,6 +36,19 @@ Template Name: Custom Page Example
 								<?php //comments_template(); ?>
 
 							</article>
+
+							<?php 
+								$contact_form_id = get_post_meta( get_the_ID(),'_polytope_contact_form',TRUE);
+								$contact_form_title = get_post_meta( get_the_ID(),'_polytope_contact_form_title',TRUE );
+								?>
+							<section class="contact-form<?php if(!$contact_form_title) { echo ' no-title'; } ?>">
+								<?php
+									if($contact_form_title) { 
+									  echo '<h1><' . __($contact_form_title, 'polytope') . '</h1>';
+									}
+									echo do_shortcode( $contact_form_id ); 
+			 					?>
+							</section>
 
 							<?php endwhile; else : ?>
 

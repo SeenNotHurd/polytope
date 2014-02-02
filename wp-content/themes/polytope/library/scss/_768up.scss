@@ -19,6 +19,8 @@ GENERAL STYLES
 
 body {}
 
+// #content {
+
 /*********************
 LAYOUT & GRID STYLES
 *********************/
@@ -143,7 +145,7 @@ NAVIGATION STYLES
 	li.current_page_item,
 	li.current-page-ancestor {
 		a {
-			padding-bottom: 0.25em;
+
 		}
 	}  /* end current highlighters */
 
@@ -153,8 +155,26 @@ NAVIGATION STYLES
 
 } /* end .nav */
 
-/* Styles for inverse page */
-.inverse {
+.top-nav {
+
+	li {
+		a {
+			padding-bottom: 0.3em;
+		}
+	}
+	/* highlight current page */
+	li.current-menu-item,
+	li.current_page_item,
+	li.current-page-ancestor {
+		a {
+			padding-bottom: 0.15em;
+		}
+	}  /* end current highlighters */
+
+}
+
+/* Styles for light page */
+.colouring-light {
 	#menu-toggle {
 		span {
 			background-color: $pt-hm-white;
@@ -207,8 +227,8 @@ POSTS & CONTENT STYLES
 	}
 }
 
-.page { // Page with a background image. Requires inverse colours.
-	&.inverse { 
+.page { // Page with a background image. 
+	&.bg-image { 
 		.hentry {
 			width: 40%;
 			margin: 5%;
@@ -361,6 +381,10 @@ mobile. Make sure to double check these!
 	float: left;
 }
 
+#footer-menu {
+	display: block;
+}
+
 .footer-nav {
 		li {
 			float: none;
@@ -376,12 +400,34 @@ mobile. Make sure to double check these!
 		}
 } /* end .footer-nav */
 
-.home .footer-info {
-	width: 100%;
-	p {
-		margin: 0;
+.footer-bottom {
+	&.slimline {
+		#footer-menu {
+			display: none;
+		}
+		.footer-info {
+			width: 100%;
+			p {
+				float: left;
+				padding-right: 2em;
+			}
+		}
+	}
+}
+
+/*********************
+CONTACT PAGE TEMPLATE STYLES
+*********************/
+
+.page-template-page-contact-form-php {
+	article,
+	.contact-form {
+		width: 50%;
 		float: left;
-		padding-right: 1rem;
+	}
+
+	.no-title {
+		margin-top: 4.25rem;
 	}
 }
 
@@ -543,7 +589,7 @@ WOOOMMERCE STYLES
 	}
 	.wp-post-image {
 		max-width: 100%;
-		height: 100%;
+		height: auto;
 	}
   //text-align: center;
   // width: 96%;
@@ -572,11 +618,14 @@ WOOOMMERCE STYLES
 
 /* Slippry modifications */
 
+
+
 .sy-box {
 	overflow: hidden;
 	.sy-slides-wrap {
 		width: 25%;
 		margin: 0 auto;
+		height: auto;
 		.sy-slides-crop {
 			overflow: visible;
 		}

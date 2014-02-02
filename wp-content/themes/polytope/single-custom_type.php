@@ -45,7 +45,7 @@ single-bookmarks.php
 
 								</footer>
 
-								<?php comments_template(); ?>
+								<?php //comments_template(); ?>
 
 							</article>
 
@@ -69,7 +69,7 @@ single-bookmarks.php
 
 						</div>
 
-						<?php get_sidebar(); ?>
+						<?php //get_sidebar(); ?>
 
 				</div>
 

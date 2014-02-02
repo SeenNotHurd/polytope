@@ -49,6 +49,18 @@ $mobile_break: 600px;     // breakpoint to use some special mobile styling
 }
 /* -------------------------- END MIXINS ---------------------------------- */
 
+/* Show only on load */
+.sy-box {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.loaded .sy-box {
+  visibility: visible;
+  opacity: 1;
+  @include single-transition(opacity, 3s);
+}
+
 /* kenBurns animations, very basic */
 @include keyframes(left-right) {
   0% {

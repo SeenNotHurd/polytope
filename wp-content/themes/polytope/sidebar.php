@@ -6,13 +6,7 @@
 
 					<?php else : ?>
 
-						<?php if($debug) {// This content shows up if there are no widgets defined in the backend. ?>
-
-						<div class="alert alert-help">
-							<p><?php _e( 'Please activate some Widgets.', 'bonestheme' );  ?></p>
-						</div>
-
-						<?php } ?>
+						
 
 					<?php endif; ?>
 

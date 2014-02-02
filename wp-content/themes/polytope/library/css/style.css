@@ -893,9 +893,26 @@ BUTTONS
  */
 /* -------------------------- MIXINS ---------------------------------- */
 /* -------------------------- END MIXINS ---------------------------------- */
+/* Show only on load */
+/* line 53, ../scss/_slippry.scss */
+.sy-box {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* line 58, ../scss/_slippry.scss */
+.loaded .sy-box {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: opacity 3s;
+  -moz-transition: opacity 3s;
+  -o-transition: opacity 3s;
+  transition: opacity 3s;
+}
+
 /* kenBurns animations, very basic */
 @-webkit-keyframes left-right {
-  /* line 54, ../scss/_slippry.scss */
+  /* line 66, ../scss/_slippry.scss */
   0% {
     -webkit-transform: translateY(-20%) translateX(-10%);
     -moz-transform: translateY(-20%) translateX(-10%);
@@ -904,7 +921,7 @@ BUTTONS
     transform: translateY(-20%) translateX(-10%);
   }
 
-  /* line 57, ../scss/_slippry.scss */
+  /* line 69, ../scss/_slippry.scss */
   100% {
     -webkit-transform: translateY(0%) translateX(10%);
     -moz-transform: translateY(0%) translateX(10%);
@@ -915,7 +932,7 @@ BUTTONS
 }
 
 @-moz-keyframes left-right {
-  /* line 54, ../scss/_slippry.scss */
+  /* line 66, ../scss/_slippry.scss */
   0% {
     -webkit-transform: translateY(-20%) translateX(-10%);
     -moz-transform: translateY(-20%) translateX(-10%);
@@ -924,7 +941,7 @@ BUTTONS
     transform: translateY(-20%) translateX(-10%);
   }
 
-  /* line 57, ../scss/_slippry.scss */
+  /* line 69, ../scss/_slippry.scss */
   100% {
     -webkit-transform: translateY(0%) translateX(10%);
     -moz-transform: translateY(0%) translateX(10%);
@@ -935,7 +952,7 @@ BUTTONS
 }
 
 @-ms-keyframes left-right {
-  /* line 54, ../scss/_slippry.scss */
+  /* line 66, ../scss/_slippry.scss */
   0% {
     -webkit-transform: translateY(-20%) translateX(-10%);
     -moz-transform: translateY(-20%) translateX(-10%);
@@ -944,7 +961,7 @@ BUTTONS
     transform: translateY(-20%) translateX(-10%);
   }
 
-  /* line 57, ../scss/_slippry.scss */
+  /* line 69, ../scss/_slippry.scss */
   100% {
     -webkit-transform: translateY(0%) translateX(10%);
     -moz-transform: translateY(0%) translateX(10%);
@@ -955,7 +972,7 @@ BUTTONS
 }
 
 @keyframes left-right {
-  /* line 54, ../scss/_slippry.scss */
+  /* line 66, ../scss/_slippry.scss */
   0% {
     -webkit-transform: translateY(-20%) translateX(-10%);
     -moz-transform: translateY(-20%) translateX(-10%);
@@ -964,7 +981,7 @@ BUTTONS
     transform: translateY(-20%) translateX(-10%);
   }
 
-  /* line 57, ../scss/_slippry.scss */
+  /* line 69, ../scss/_slippry.scss */
   100% {
     -webkit-transform: translateY(0%) translateX(10%);
     -moz-transform: translateY(0%) translateX(10%);
@@ -975,7 +992,7 @@ BUTTONS
 }
 
 @-webkit-keyframes right-left {
-  /* line 62, ../scss/_slippry.scss */
+  /* line 74, ../scss/_slippry.scss */
   0% {
     -webkit-transform: translateY(0%) translateX(10%);
     -moz-transform: translateY(0%) translateX(10%);
@@ -984,7 +1001,7 @@ BUTTONS
     transform: translateY(0%) translateX(10%);
   }
 
-  /* line 65, ../scss/_slippry.scss */
+  /* line 77, ../scss/_slippry.scss */
   100% {
     -webkit-transform: translateY(-20%) translateX(-10%);
     -moz-transform: translateY(-20%) translateX(-10%);
@@ -995,7 +1012,7 @@ BUTTONS
 }
 
 @-moz-keyframes right-left {
-  /* line 62, ../scss/_slippry.scss */
+  /* line 74, ../scss/_slippry.scss */
   0% {
     -webkit-transform: translateY(0%) translateX(10%);
     -moz-transform: translateY(0%) translateX(10%);
@@ -1004,7 +1021,7 @@ BUTTONS
     transform: translateY(0%) translateX(10%);
   }
 
-  /* line 65, ../scss/_slippry.scss */
+  /* line 77, ../scss/_slippry.scss */
   100% {
     -webkit-transform: translateY(-20%) translateX(-10%);
     -moz-transform: translateY(-20%) translateX(-10%);
@@ -1015,7 +1032,7 @@ BUTTONS
 }
 
 @-ms-keyframes right-left {
-  /* line 62, ../scss/_slippry.scss */
+  /* line 74, ../scss/_slippry.scss */
   0% {
     -webkit-transform: translateY(0%) translateX(10%);
     -moz-transform: translateY(0%) translateX(10%);
@@ -1024,7 +1041,7 @@ BUTTONS
     transform: translateY(0%) translateX(10%);
   }
 
-  /* line 65, ../scss/_slippry.scss */
+  /* line 77, ../scss/_slippry.scss */
   100% {
     -webkit-transform: translateY(-20%) translateX(-10%);
     -moz-transform: translateY(-20%) translateX(-10%);
@@ -1035,7 +1052,7 @@ BUTTONS
 }
 
 @keyframes right-left {
-  /* line 62, ../scss/_slippry.scss */
+  /* line 74, ../scss/_slippry.scss */
   0% {
     -webkit-transform: translateY(0%) translateX(10%);
     -moz-transform: translateY(0%) translateX(10%);
@@ -1044,7 +1061,7 @@ BUTTONS
     transform: translateY(0%) translateX(10%);
   }
 
-  /* line 65, ../scss/_slippry.scss */
+  /* line 77, ../scss/_slippry.scss */
   100% {
     -webkit-transform: translateY(-20%) translateX(-10%);
     -moz-transform: translateY(-20%) translateX(-10%);
@@ -1055,7 +1072,7 @@ BUTTONS
 }
 
 /* added to the original element calling slippry */
-/* line 71, ../scss/_slippry.scss */
+/* line 83, ../scss/_slippry.scss */
 .sy-box.sy-loading {
   background: url(assets/img/sy-loader.gif) 50% 50% no-repeat;
   -webkit-background-size: 32px;
@@ -1064,25 +1081,25 @@ BUTTONS
   background-size: 32px;
   min-height: 40px;
 }
-/* line 72, ../scss/_slippry.scss */
+/* line 84, ../scss/_slippry.scss */
 .sy-box.sy-loading .sy-slides-wrap, .sy-box.sy-loading .sy-pager {
   visibility: hidden;
 }
 
 /* element that wraps the slides */
-/* line 81, ../scss/_slippry.scss */
+/* line 93, ../scss/_slippry.scss */
 .sy-slides-wrap {
   position: relative;
   height: 100%;
   width: 100%;
 }
-/* line 86, ../scss/_slippry.scss */
+/* line 98, ../scss/_slippry.scss */
 .sy-slides-wrap:hover .sy-controls {
   display: block;
 }
 
 /* element that crops the visible area to the slides */
-/* line 92, ../scss/_slippry.scss */
+/* line 104, ../scss/_slippry.scss */
 .sy-slides-crop {
   height: 100%;
   width: 100%;
@@ -1091,7 +1108,7 @@ BUTTONS
 }
 
 /* list containing the slides */
-/* line 99, ../scss/_slippry.scss */
+/* line 111, ../scss/_slippry.scss */
 .sy-list {
   width: 100%;
   height: 100%;
@@ -1100,14 +1117,14 @@ BUTTONS
   padding: 0;
   position: absolute;
 }
-/* line 100, ../scss/_slippry.scss */
+/* line 112, ../scss/_slippry.scss */
 .sy-list.horizontal {
   -webkit-transition: left ease;
   -moz-transition: left ease;
   -o-transition: left ease;
   transition: left ease;
 }
-/* line 103, ../scss/_slippry.scss */
+/* line 115, ../scss/_slippry.scss */
 .sy-list.vertical {
   -webkit-transition: top ease;
   -moz-transition: top ease;
@@ -1116,25 +1133,25 @@ BUTTONS
 }
 
 /* single slide */
-/* line 114, ../scss/_slippry.scss */
+/* line 126, ../scss/_slippry.scss */
 .sy-slide {
   position: absolute;
   width: 100%;
   z-index: 2;
 }
-/* line 118, ../scss/_slippry.scss */
+/* line 130, ../scss/_slippry.scss */
 .sy-slide.kenburns {
   width: 140%;
   left: -20%;
 }
-/* line 121, ../scss/_slippry.scss */
+/* line 133, ../scss/_slippry.scss */
 .sy-slide.kenburns.useCSS {
   -webkit-transition-property: opacity;
   -moz-transition-property: opacity;
   -o-transition-property: opacity;
   transition-property: opacity;
 }
-/* line 123, ../scss/_slippry.scss */
+/* line 135, ../scss/_slippry.scss */
 .sy-slide.kenburns.useCSS.sy-ken:nth-child(1n) {
   -webkit-animation-name: left-right;
   -webkit-animation-fill-mode: forwards;
@@ -1145,7 +1162,7 @@ BUTTONS
   animation-name: left-right;
   animation-fill-mode: forwards;
 }
-/* line 126, ../scss/_slippry.scss */
+/* line 138, ../scss/_slippry.scss */
 .sy-slide.kenburns.useCSS.sy-ken:nth-child(2n) {
   -webkit-animation-name: right-left;
   -webkit-animation-fill-mode: forwards;
@@ -1156,18 +1173,18 @@ BUTTONS
   animation-name: right-left;
   animation-fill-mode: forwards;
 }
-/* line 133, ../scss/_slippry.scss */
+/* line 145, ../scss/_slippry.scss */
 .sy-slide.sy-active {
   z-index: 3;
 }
-/* line 136, ../scss/_slippry.scss */
+/* line 148, ../scss/_slippry.scss */
 .sy-slide > a {
   margin: 0;
   padding: 0;
   display: block;
   width: 100%;
 }
-/* line 141, ../scss/_slippry.scss */
+/* line 153, ../scss/_slippry.scss */
 .sy-slide > a > img {
   margin: 0;
   padding: 0;
@@ -1177,7 +1194,7 @@ BUTTONS
 }
 
 /* next/ prev buttons, with arrows and clickable area a lot larger than the visible buttons */
-/* line 151, ../scss/_slippry.scss */
+/* line 163, ../scss/_slippry.scss */
 .sy-controls {
   display: none;
   list-style: none;
@@ -1187,7 +1204,7 @@ BUTTONS
   padding: 0;
   margin: 0;
 }
-/* line 159, ../scss/_slippry.scss */
+/* line 171, ../scss/_slippry.scss */
 .sy-controls li {
   position: absolute;
   width: 10%;
@@ -1195,25 +1212,25 @@ BUTTONS
   height: 100%;
   z-index: 33;
 }
-/* line 165, ../scss/_slippry.scss */
+/* line 177, ../scss/_slippry.scss */
 .sy-controls li.sy-prev {
   left: 0;
   top: 0;
 }
-/* line 169, ../scss/_slippry.scss */
+/* line 181, ../scss/_slippry.scss */
 .sy-controls li.sy-prev a:after {
   background-position: -5% 0;
 }
-/* line 174, ../scss/_slippry.scss */
+/* line 186, ../scss/_slippry.scss */
 .sy-controls li.sy-next {
   right: 0;
   top: 0;
 }
-/* line 178, ../scss/_slippry.scss */
+/* line 190, ../scss/_slippry.scss */
 .sy-controls li.sy-next a:after {
   background-position: 105% 0;
 }
-/* line 183, ../scss/_slippry.scss */
+/* line 195, ../scss/_slippry.scss */
 .sy-controls li a {
   position: relative;
   width: 100%;
@@ -1221,16 +1238,16 @@ BUTTONS
   display: block;
   text-indent: -9999px;
 }
-/* line 189, ../scss/_slippry.scss */
+/* line 201, ../scss/_slippry.scss */
 .sy-controls li a:link, .sy-controls li a:visited {
   opacity: 0.4;
 }
-/* line 192, ../scss/_slippry.scss */
+/* line 204, ../scss/_slippry.scss */
 .sy-controls li a:hover, .sy-controls li a:focus {
   opacity: 0.8;
   outline: none;
 }
-/* line 196, ../scss/_slippry.scss */
+/* line 208, ../scss/_slippry.scss */
 .sy-controls li a:after {
   content: "";
   background-image: url(assets/img/arrows.svg);
@@ -1259,15 +1276,15 @@ BUTTONS
   border-radius: 50%;
 }
 @media only screen and (max-device-width: 600px) {
-  /* line 151, ../scss/_slippry.scss */
+  /* line 163, ../scss/_slippry.scss */
   .sy-controls {
     display: block;
   }
-  /* line 221, ../scss/_slippry.scss */
+  /* line 233, ../scss/_slippry.scss */
   .sy-controls li {
     min-width: 2.1em;
   }
-  /* line 224, ../scss/_slippry.scss */
+  /* line 236, ../scss/_slippry.scss */
   .sy-controls li a:after {
     width: 1.4em;
     height: 1.4em;
@@ -1277,14 +1294,14 @@ BUTTONS
 }
 
 /* captions, styled fo the overlay variant */
-/* line 235, ../scss/_slippry.scss */
+/* line 247, ../scss/_slippry.scss */
 .sy-caption-wrap {
   position: absolute;
   bottom: 2em;
   z-index: 12;
   left: 50%;
 }
-/* line 240, ../scss/_slippry.scss */
+/* line 252, ../scss/_slippry.scss */
 .sy-caption-wrap .sy-caption {
   position: relative;
   left: -50%;
@@ -1297,23 +1314,23 @@ BUTTONS
   -o-border-radius: 1.2em;
   border-radius: 1.2em;
 }
-/* line 248, ../scss/_slippry.scss */
+/* line 260, ../scss/_slippry.scss */
 .sy-caption-wrap .sy-caption a:link, .sy-caption-wrap .sy-caption a:visited {
   color: #e24b70;
   font-weight: 600;
   text-decoration: none;
 }
-/* line 253, ../scss/_slippry.scss */
+/* line 265, ../scss/_slippry.scss */
 .sy-caption-wrap .sy-caption a:hover, .sy-caption-wrap .sy-caption a:focus {
   text-decoration: underline;
 }
 @media only screen and (max-device-width: 600px), screen and (max-width: 600px) {
-  /* line 235, ../scss/_slippry.scss */
+  /* line 247, ../scss/_slippry.scss */
   .sy-caption-wrap {
     left: 0;
     bottom: 0.4em;
   }
-  /* line 261, ../scss/_slippry.scss */
+  /* line 273, ../scss/_slippry.scss */
   .sy-caption-wrap .sy-caption {
     left: 0;
     padding: 0.2em 0.4em;
@@ -1327,7 +1344,7 @@ BUTTONS
 }
 
 /* pager bubbles */
-/* line 270, ../scss/_slippry.scss */
+/* line 282, ../scss/_slippry.scss */
 .sy-pager {
   overflow: hidden;
   *zoom: 1;
@@ -1338,7 +1355,7 @@ BUTTONS
   list-style: none;
   text-align: center;
 }
-/* line 278, ../scss/_slippry.scss */
+/* line 290, ../scss/_slippry.scss */
 .sy-pager li {
   display: inline-block;
   width: 1.2em;
@@ -1350,11 +1367,11 @@ BUTTONS
   -o-border-radius: 50%;
   border-radius: 50%;
 }
-/* line 285, ../scss/_slippry.scss */
+/* line 297, ../scss/_slippry.scss */
 .sy-pager li.sy-active a {
   background-color: #e24b70;
 }
-/* line 289, ../scss/_slippry.scss */
+/* line 301, ../scss/_slippry.scss */
 .sy-pager li a {
   width: 100%;
   height: 100%;
@@ -1371,21 +1388,21 @@ BUTTONS
   -o-border-radius: 50%;
   border-radius: 50%;
 }
-/* line 295, ../scss/_slippry.scss */
+/* line 307, ../scss/_slippry.scss */
 .sy-pager li a:link, .sy-pager li a:visited {
   opacity: 1.0;
 }
-/* line 298, ../scss/_slippry.scss */
+/* line 310, ../scss/_slippry.scss */
 .sy-pager li a:hover, .sy-pager li a:focus {
   opacity: 0.6;
 }
 
 /* element to "keep/ fill" the space of the content, gets intrinsic height via js */
-/* line 307, ../scss/_slippry.scss */
+/* line 319, ../scss/_slippry.scss */
 .sy-filler {
   width: 100%;
 }
-/* line 309, ../scss/_slippry.scss */
+/* line 321, ../scss/_slippry.scss */
 .sy-filler.ready {
   -webkit-transition: padding 600ms ease;
   -moz-transition: padding 600ms ease;
@@ -1415,25 +1432,34 @@ and will be used across all viewports.
 GENERAL STYLES
 *********************/
 /* line 18, ../scss/_base.scss */
-html {
-  height: 100%;
-}
-
-/* line 22, ../scss/_base.scss */
 body {
   font-family: "aleo", Cambria, Times New Roman, Times, serif;
   font-size: 100%;
   line-height: 1.5;
-  color: black;
-  height: 100%;
+  color: #323232;
+}
+
+/* line 26, ../scss/_base.scss */
+.debug-note {
+  display: none;
+}
+
+/* line 31, ../scss/_base.scss */
+.admin-bar .debug-note {
+  position: absolute;
+  top: 46px;
+  right: 0;
+  background-color: red;
+  color: white;
+  display: inline-block;
 }
 
 /* Form elements */
-/* line 35, ../scss/_base.scss */
+/* line 44, ../scss/_base.scss */
 input {
   -webkit-appearance: none;
 }
-/* line 38, ../scss/_base.scss */
+/* line 47, ../scss/_base.scss */
 input[type="submit"], input[type="reset"] {
   background-color: #ff3410;
   color: white;
@@ -1442,15 +1468,41 @@ input[type="submit"], input[type="reset"] {
   padding: 0.25em 0.5em 0.15em;
   line-height: 1.5;
 }
-/* line 46, ../scss/_base.scss */
-input[type="text"] {
-  border: 1px solid black;
+/* line 56, ../scss/_base.scss */
+input[type="text"], input[type="email"] {
+  border: 1px solid #969696;
   outline: 0;
   padding: 0.35em 0.5em 0.25em;
+  max-width: 100%;
 }
-/* line 50, ../scss/_base.scss */
-input[type="text"]:focus {
-  border-color: #ff3410;
+/* line 61, ../scss/_base.scss */
+input[type="text"]:focus, input[type="email"]:focus {
+  -webkit-transition: border-color 1s;
+  -moz-transition: border-color 1s;
+  -o-transition: border-color 1s;
+  transition: border-color 1s;
+  border-color: #323232;
+}
+
+/* line 68, ../scss/_base.scss */
+textarea {
+  border: 1px solid #969696;
+  outline: 0;
+  padding: 0.35em 0.5em 0.25em;
+  max-width: 100%;
+}
+/* line 73, ../scss/_base.scss */
+textarea:focus {
+  -webkit-transition: border-color 1s;
+  -moz-transition: border-color 1s;
+  -o-transition: border-color 1s;
+  transition: border-color 1s;
+  border-color: #323232;
+}
+
+/* line 79, ../scss/_base.scss */
+select {
+  outline: 0;
 }
 
 /********************
@@ -1458,7 +1510,7 @@ WORDPRESS BODY CLASSES
 style a page via class
 ********************/
 /* for sites that are read right to left (i.e. hebrew) */
-/* line 61, ../scss/_base.scss */
+/* line 88, ../scss/_base.scss */
 .home {
   /* home page */
 }
@@ -1499,26 +1551,27 @@ style a page via class
 /*********************
 LAYOUT & GRID STYLES
 *********************/
-/* line 103, ../scss/_base.scss */
+/* line 130, ../scss/_base.scss */
 .wrap {
+  width: 96%;
   margin: 0 auto;
 }
 
 /*********************
 LINK STYLES
 *********************/
-/* line 112, ../scss/_base.scss */
+/* line 139, ../scss/_base.scss */
 a, a:visited {
   color: #555555;
   /* on hover */
   /* on click */
   /* mobile tap color */
 }
-/* line 116, ../scss/_base.scss */
+/* line 143, ../scss/_base.scss */
 a:hover, a:focus, a:visited:hover, a:visited:focus {
   color: #3e3e3e;
 }
-/* line 126, ../scss/_base.scss */
+/* line 153, ../scss/_base.scss */
 a:link, a:visited:link {
   /*
   this highlights links on iPhones/iPads.
@@ -1531,47 +1584,48 @@ a:link, a:visited:link {
 /******************************************************************
 H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
-/* line 166, ../scss/_base.scss */
+/* line 193, ../scss/_base.scss */
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   font-family: "loveloblack", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
   font-weight: 800;
+  color: #323232;
   /*
   if you're going to use webfonts, be sure to check your weights
   http://css-tricks.com/watch-your-font-weight/
   */
   /* removing text decoration from all headline links */
 }
-/* line 176, ../scss/_base.scss */
+/* line 204, ../scss/_base.scss */
 h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
   text-decoration: none;
 }
 
-/* line 181, ../scss/_base.scss */
+/* line 209, ../scss/_base.scss */
 h1, .h1 {
   font-size: 2em;
   line-height: 1em;
 }
 
-/* line 186, ../scss/_base.scss */
+/* line 214, ../scss/_base.scss */
 h2, .h2 {
   font-size: 1.667em;
   line-height: 1em;
   margin: 0;
 }
 
-/* line 192, ../scss/_base.scss */
+/* line 220, ../scss/_base.scss */
 h3, .h3 {
   font-size: 1em;
 }
 
-/* line 196, ../scss/_base.scss */
+/* line 224, ../scss/_base.scss */
 h4, .h4 {
   font-size: 1em;
   font-weight: 700;
 }
 
-/* line 201, ../scss/_base.scss */
+/* line 229, ../scss/_base.scss */
 h5, .h5 {
   font-size: 0.846em;
   line-height: 2.09em;
@@ -1582,20 +1636,21 @@ h5, .h5 {
 /*********************
 HEADER STYLES
 *********************/
-/* line 212, ../scss/_base.scss */
+/* line 240, ../scss/_base.scss */
 .header {
   border-bottom: 1px solid #323232;
 }
 
-/* line 217, ../scss/_base.scss */
+/* line 248, ../scss/_base.scss */
 #logo {
   max-height: 5rem;
   padding: 0.7rem;
+  padding-left: 0;
   vertical-align: top;
   margin-right: 1rem;
 }
 
-/* line 224, ../scss/_base.scss */
+/* line 256, ../scss/_base.scss */
 #blog-name {
   position: absolute;
   overflow: hidden;
@@ -1608,9 +1663,10 @@ HEADER STYLES
 }
 
 /* Inverse styling */
-/* line 231, ../scss/_base.scss */
-.inverse .header {
+/* line 263, ../scss/_base.scss */
+.colouring-light .header {
   border-bottom-color: white;
+  color: white;
   background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -1618,13 +1674,13 @@ HEADER STYLES
 NAVIGATION STYLES
 *********************/
 /* Toggle lines for menu */
-/* line 243, ../scss/_base.scss */
+/* line 276, ../scss/_base.scss */
 #menu-toggle {
   max-height: 5rem;
   float: right;
   padding: 2rem;
 }
-/* line 247, ../scss/_base.scss */
+/* line 280, ../scss/_base.scss */
 #menu-toggle span {
   background-color: #323232;
   height: 0.2rem;
@@ -1640,19 +1696,17 @@ easily write one group of styles for
 the navs on the site so our css is cleaner
 and more scalable.
 */
-/* line 264, ../scss/_base.scss */
+/* line 297, ../scss/_base.scss */
 .nav {
-  font-family: "loveloblack", Helvetica, Arial, sans-serif;
   margin: 0;
   /* end .menu li */
   /* highlight current page */
   /* end current highlighters */
 }
-/* line 268, ../scss/_base.scss */
+/* line 300, ../scss/_base.scss */
 .nav li {
   list-style: none;
   display: block;
-  border-top: 1px solid #323232;
   /*
   so you really have to rethink your dropdowns for mobile.
   you don't want to have it expand too much because the
@@ -1661,7 +1715,7 @@ and more scalable.
   http://www.alistapart.com/articles/organizing-mobile/
   */
 }
-/* line 272, ../scss/_base.scss */
+/* line 303, ../scss/_base.scss */
 .nav li a {
   display: inline-block;
   text-decoration: none;
@@ -1675,63 +1729,75 @@ and more scalable.
   keep this file as small as possible!
   */
 }
-/* line 332, ../scss/_base.scss */
-.nav li.current-menu-item a,
-.nav li.current_page_item a,
-.nav li.current-page-ancestor a {
-  border-bottom: 2px solid #323232;
-  padding-bottom: 0.45rem;
-}
-/* line 339, ../scss/_base.scss */
+/* line 368, ../scss/_base.scss */
 .nav.collapsed {
   display: none;
 }
 
 /* end .nav */
-/* Styles for inverse page */
-/* line 346, ../scss/_base.scss */
-.inverse {
+/* Specific styles for header menu */
+/* line 376, ../scss/_base.scss */
+.top-nav {
+  font-family: "loveloblack", Helvetica, Arial, sans-serif;
+  /* highlight current page */
+  /* end current highlighters */
+}
+/* line 379, ../scss/_base.scss */
+.top-nav li {
+  border-top: 1px solid #323232;
+}
+/* line 388, ../scss/_base.scss */
+.top-nav li.current-menu-item a,
+.top-nav li.current_page_item a,
+.top-nav li.current-page-ancestor a {
+  border-bottom: 2px solid #323232;
+  padding-bottom: 0.45rem;
+}
+
+/* Styles for light colour page */
+/* line 398, ../scss/_base.scss */
+.colouring-light {
   /* end .nav */
 }
-/* line 348, ../scss/_base.scss */
-.inverse #menu-toggle span {
+/* line 400, ../scss/_base.scss */
+.colouring-light #menu-toggle span {
   background-color: white;
 }
-/* line 354, ../scss/_base.scss */
-.inverse .nav li {
-  border-top: 1px solid white;
+/* line 406, ../scss/_base.scss */
+.colouring-light .nav li {
+  border-top-color: white;
 }
-/* line 356, ../scss/_base.scss */
-.inverse .nav li a {
+/* line 408, ../scss/_base.scss */
+.colouring-light .nav li a {
   color: white;
 }
-/* line 366, ../scss/_base.scss */
-.inverse .nav li.current-menu-item a,
-.inverse .nav li.current_page_item a,
-.inverse .nav li.current-page-ancestor a {
-  border-bottom: 2px solid white;
+/* line 418, ../scss/_base.scss */
+.colouring-light .nav li.current-menu-item a,
+.colouring-light .nav li.current_page_item a,
+.colouring-light .nav li.current-page-ancestor a {
+  border-bottom-color: white;
 }
 
 /*********************
 POSTS & CONTENT STYLES
 *********************/
-/* line 383, ../scss/_base.scss */
+/* line 435, ../scss/_base.scss */
 .featured-image {
   margin: 1em 0;
 }
-/* line 385, ../scss/_base.scss */
+/* line 437, ../scss/_base.scss */
 .featured-image img {
   max-width: 100%;
   height: auto;
 }
 
-/* line 393, ../scss/_base.scss */
+/* line 445, ../scss/_base.scss */
 .hentry header {
   margin: 1.5em 0;
 }
 
 /* end .hentry */
-/* line 404, ../scss/_base.scss */
+/* line 456, ../scss/_base.scss */
 .single-title {
   margin: 0;
 }
@@ -1739,7 +1805,7 @@ POSTS & CONTENT STYLES
 /* want to style individual post classes? Booya! */
 /* post by id (i.e. post-3) */
 /* general post style */
-/* line 415, ../scss/_base.scss */
+/* line 467, ../scss/_base.scss */
 .page {
   /* general article on a page style */
 }
@@ -1750,14 +1816,14 @@ POSTS & CONTENT STYLES
 /* style by category (i.e. category-videos) */
 /* style by tag (i.e. tag-news) */
 /* post meta */
-/* line 424, ../scss/_base.scss */
+/* line 476, ../scss/_base.scss */
 .byline {
-  color: #969696;
+  color: #646464;
   margin: 0;
 }
 
 /* entry content */
-/* line 432, ../scss/_base.scss */
+/* line 484, ../scss/_base.scss */
 .entry-content {
   /*
   image alignment on a screen this size may be
@@ -1766,29 +1832,29 @@ POSTS & CONTENT STYLES
   but it's up to you. Feel free to change it up.
   */
 }
-/* line 435, ../scss/_base.scss */
+/* line 487, ../scss/_base.scss */
 .entry-content p:first-child {
   margin-top: 0;
 }
-/* line 471, ../scss/_base.scss */
+/* line 523, ../scss/_base.scss */
 .entry-content dd {
   margin-left: 0;
   font-size: 0.9em;
   color: #787878;
   margin-bottom: 1.5em;
 }
-/* line 478, ../scss/_base.scss */
+/* line 530, ../scss/_base.scss */
 .entry-content img {
   margin: 0 0 1.5em 0;
   max-width: 100%;
   height: auto;
 }
-/* line 494, ../scss/_base.scss */
+/* line 546, ../scss/_base.scss */
 .entry-content video, .entry-content object {
   max-width: 100%;
   height: auto;
 }
-/* line 499, ../scss/_base.scss */
+/* line 551, ../scss/_base.scss */
 .entry-content pre {
   background: #eee;
   border: 1px solid #cecece;
@@ -1796,20 +1862,20 @@ POSTS & CONTENT STYLES
 }
 
 /* end .entry-content */
-/* line 507, ../scss/_base.scss */
+/* line 559, ../scss/_base.scss */
 .wp-caption {
   max-width: 100%;
   background: #eee;
   padding: 5px;
   /* images inside wp-caption */
 }
-/* line 513, ../scss/_base.scss */
+/* line 565, ../scss/_base.scss */
 .wp-caption img {
   max-width: 100%;
   margin-bottom: 0;
   width: 100%;
 }
-/* line 519, ../scss/_base.scss */
+/* line 571, ../scss/_base.scss */
 .wp-caption p.wp-caption-text {
   font-size: 0.85em;
   margin: 4px 0 7px;
@@ -1820,37 +1886,33 @@ POSTS & CONTENT STYLES
 /* image gallery styles */
 /* end .gallery */
 /* gallery caption styles */
-/* line 553, ../scss/_base.scss */
-.page.inverse {
+/* line 605, ../scss/_base.scss */
+.page.bg-image {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
-/* line 558, ../scss/_base.scss */
-.page.inverse .hentry {
+/* line 610, ../scss/_base.scss */
+.page.bg-image .hentry {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 0 1em;
   margin: 1em;
-}
-/* line 565, ../scss/_base.scss */
-.page.home .hentry {
-  display: none;
 }
 
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
-/* line 577, ../scss/_base.scss */
+/* line 625, ../scss/_base.scss */
 .pagination,
 .wp-prev-next {
   margin: 1.1em 0 2.2em;
 }
 
-/* line 580, ../scss/_base.scss */
+/* line 628, ../scss/_base.scss */
 .pagination {
   text-align: center;
 }
-/* line 582, ../scss/_base.scss */
+/* line 630, ../scss/_base.scss */
 .pagination ul {
   display: inline-block;
   white-space: nowrap;
@@ -1858,7 +1920,7 @@ PAGE NAVI STYLES
   clear: both;
   margin: 1px;
 }
-/* line 588, ../scss/_base.scss */
+/* line 636, ../scss/_base.scss */
 .pagination ul li {
   padding: 0;
   margin: 0;
@@ -1866,7 +1928,7 @@ PAGE NAVI STYLES
   display: inline;
   overflow: hidden;
 }
-/* line 594, ../scss/_base.scss */
+/* line 642, ../scss/_base.scss */
 .pagination ul li a, .pagination ul li span {
   margin: 0;
   text-decoration: none;
@@ -1878,18 +1940,18 @@ PAGE NAVI STYLES
   min-width: 1em;
   display: block;
 }
-/* line 605, ../scss/_base.scss */
+/* line 653, ../scss/_base.scss */
 .pagination ul li span.current {
   font-weight: bold;
 }
 
 /* end .bones_page_navi */
 /* fallback previous & next links */
-/* line 620, ../scss/_base.scss */
+/* line 668, ../scss/_base.scss */
 .wp-prev-next .prev-link {
   float: left;
 }
-/* line 624, ../scss/_base.scss */
+/* line 672, ../scss/_base.scss */
 .wp-prev-next .next-link {
   float: right;
 }
@@ -1899,12 +1961,12 @@ PAGE NAVI STYLES
 COMMENT STYLES
 ******************************************************************/
 /* h3 comment title */
-/* line 635, ../scss/_base.scss */
+/* line 683, ../scss/_base.scss */
 #comments {
   /* number of comments span */
 }
 
-/* line 652, ../scss/_base.scss */
+/* line 700, ../scss/_base.scss */
 .commentlist {
   /* general comment classes */
   /* vcard */
@@ -1915,7 +1977,7 @@ COMMENT STYLES
   /* comment reply link */
   /* end .commentlist .comment-reply-link */
 }
-/* line 654, ../scss/_base.scss */
+/* line 702, ../scss/_base.scss */
 .commentlist li {
   position: relative;
   clear: both;
@@ -1925,63 +1987,63 @@ COMMENT STYLES
   padding: 0.7335em 10px;
   /* end .commentlist li ul.children */
 }
-/* line 662, ../scss/_base.scss */
+/* line 710, ../scss/_base.scss */
 .commentlist li:last-child {
   margin-bottom: 0;
 }
-/* line 666, ../scss/_base.scss */
+/* line 714, ../scss/_base.scss */
 .commentlist li ul.children {
   margin: 0;
   /* variations */
   /* change number for different depth */
 }
-/* line 684, ../scss/_base.scss */
+/* line 732, ../scss/_base.scss */
 .commentlist li[class*=depth-] {
   margin-top: 1.1em;
 }
-/* line 688, ../scss/_base.scss */
+/* line 736, ../scss/_base.scss */
 .commentlist li.depth-1 {
   margin-left: 0;
   margin-top: 0;
 }
-/* line 693, ../scss/_base.scss */
+/* line 741, ../scss/_base.scss */
 .commentlist li:not(.depth-1) {
   margin-right: -10px;
   margin-left: -10px;
   margin-top: 0;
   padding-bottom: 0;
 }
-/* line 707, ../scss/_base.scss */
+/* line 755, ../scss/_base.scss */
 .commentlist .odd {
   background: #eee;
 }
-/* line 710, ../scss/_base.scss */
+/* line 758, ../scss/_base.scss */
 .commentlist .even {
   background: #fefefe;
 }
-/* line 725, ../scss/_base.scss */
+/* line 773, ../scss/_base.scss */
 .commentlist .vcard {
   margin-left: 50px;
 }
-/* line 728, ../scss/_base.scss */
+/* line 776, ../scss/_base.scss */
 .commentlist .vcard cite.fn {
   font-weight: 700;
   font-style: normal;
 }
-/* line 736, ../scss/_base.scss */
+/* line 784, ../scss/_base.scss */
 .commentlist .vcard time {
   float: right;
 }
-/* line 739, ../scss/_base.scss */
+/* line 787, ../scss/_base.scss */
 .commentlist .vcard time a {
   color: #999;
   text-decoration: none;
 }
-/* line 743, ../scss/_base.scss */
+/* line 791, ../scss/_base.scss */
 .commentlist .vcard time a:hover {
   text-decoration: underline;
 }
-/* line 753, ../scss/_base.scss */
+/* line 801, ../scss/_base.scss */
 .commentlist .vcard img.avatar {
   position: absolute;
   left: 10px;
@@ -1989,17 +2051,17 @@ COMMENT STYLES
   border: 1px solid #cecece;
   background: #fff;
 }
-/* line 778, ../scss/_base.scss */
+/* line 826, ../scss/_base.scss */
 .commentlist .comment_content {
   margin-left: 50px;
 }
-/* line 781, ../scss/_base.scss */
+/* line 829, ../scss/_base.scss */
 .commentlist .comment_content p {
   margin: 0.7335em 0 1.5em;
   font-size: 1em;
   line-height: 1.5em;
 }
-/* line 790, ../scss/_base.scss */
+/* line 838, ../scss/_base.scss */
 .commentlist .comment-reply-link {
   text-decoration: none;
   float: right;
@@ -2011,7 +2073,7 @@ COMMENT STYLES
   font-weight: 700;
   font-size: 0.9em;
 }
-/* line 802, ../scss/_base.scss */
+/* line 850, ../scss/_base.scss */
 .commentlist .comment-reply-link:hover, .commentlist .comment-reply-link:focus {
   opacity: 1;
 }
@@ -2020,27 +2082,27 @@ COMMENT STYLES
 /******************************************************************
 COMMENT FORM STYLES
 ******************************************************************/
-/* line 814, ../scss/_base.scss */
+/* line 862, ../scss/_base.scss */
 .respond-form {
   margin: 1.5em 10px;
   padding-bottom: 2.2em;
 }
-/* line 818, ../scss/_base.scss */
+/* line 866, ../scss/_base.scss */
 .respond-form form {
   margin: 0.75em 0;
 }
-/* line 821, ../scss/_base.scss */
+/* line 869, ../scss/_base.scss */
 .respond-form form li {
   list-style-type: none;
   clear: both;
   margin-bottom: 0.7335em;
 }
-/* line 827, ../scss/_base.scss */
+/* line 875, ../scss/_base.scss */
 .respond-form form li label,
 .respond-form form li small {
   display: none;
 }
-/* line 835, ../scss/_base.scss */
+/* line 883, ../scss/_base.scss */
 .respond-form form input[type=text],
 .respond-form form input[type=email],
 .respond-form form input[type=url],
@@ -2051,14 +2113,14 @@ COMMENT FORM STYLES
   line-height: 1.5em;
   /* form validation */
 }
-/* line 841, ../scss/_base.scss */
+/* line 889, ../scss/_base.scss */
 .respond-form form input[type=text]:focus,
 .respond-form form input[type=email]:focus,
 .respond-form form input[type=url]:focus,
 .respond-form form textarea:focus {
   background: #fff;
 }
-/* line 846, ../scss/_base.scss */
+/* line 894, ../scss/_base.scss */
 .respond-form form input[type=text]:invalid,
 .respond-form form input[type=email]:invalid,
 .respond-form form input[type=url]:invalid,
@@ -2071,14 +2133,14 @@ COMMENT FORM STYLES
   -ms-box-shadow: none;
   box-shadow: none;
 }
-/* line 859, ../scss/_base.scss */
+/* line 907, ../scss/_base.scss */
 .respond-form form input[type=text],
 .respond-form form input[type=email],
 .respond-form form input[type=url] {
   max-width: 400px;
   min-width: 250px;
 }
-/* line 864, ../scss/_base.scss */
+/* line 912, ../scss/_base.scss */
 .respond-form form textarea {
   resize: none;
   width: 97.3%;
@@ -2087,7 +2149,7 @@ COMMENT FORM STYLES
 
 /* comment submit button */
 /* comment form title */
-/* line 877, ../scss/_base.scss */
+/* line 925, ../scss/_base.scss */
 #comment-form-title {
   margin: 0 0 1.1em;
 }
@@ -2095,13 +2157,13 @@ COMMENT FORM STYLES
 /* cancel comment reply link */
 /* logged in comments */
 /* allowed tags */
-/* line 890, ../scss/_base.scss */
+/* line 938, ../scss/_base.scss */
 #allowed_tags {
   margin: 1.5em 10px 0.7335em 0;
 }
 
 /* no comments */
-/* line 895, ../scss/_base.scss */
+/* line 943, ../scss/_base.scss */
 .nocomments {
   margin: 0 20px 1.1em;
 }
@@ -2109,7 +2171,7 @@ COMMENT FORM STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 911, ../scss/_base.scss */
+/* line 959, ../scss/_base.scss */
 .widget ul li {
   /* deep nesting */
 }
@@ -2117,20 +2179,19 @@ SIDEBARS & ASIDES
 /*********************
 FOOTER STYLES
 *********************/
-/* line 932, ../scss/_base.scss */
+/* line 980, ../scss/_base.scss */
 .footer {
   clear: both;
-  border-top: 1px solid black;
+  border-top: 1px solid #323232;
 }
-/* line 935, ../scss/_base.scss */
+/* line 983, ../scss/_base.scss */
 .footer p {
   margin: 0;
 }
 
-/* when a page with bg image */
-/* line 950, ../scss/_base.scss */
+/* line 988, ../scss/_base.scss */
 #inner-footer {
-  padding: 1rem 0;
+  padding: 0.7rem 0;
 }
 
 /*
@@ -2142,35 +2203,48 @@ it simple because you'll have to
 override these styles for the desktop
 view.
 */
-/* line 966, ../scss/_base.scss */
+/* line 1001, ../scss/_base.scss */
 .footer-nav {
   border-top: 0;
   margin: 0;
+  margin-top: 0.7rem;
 }
-/* line 971, ../scss/_base.scss */
+/* line 1008, ../scss/_base.scss */
 .footer-nav li a {
   border: 0;
   padding: 0;
+  margin: 0;
 }
 
 /* end .footer-nav */
-/* line 984, ../scss/_base.scss */
-.home .footer-nav {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  width: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
+/* line 1021, ../scss/_base.scss */
+#footer-menu {
+  display: none;
 }
 
+/* line 1026, ../scss/_base.scss */
+.colouring-light .footer {
+  border-top-color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+/* line 1034, ../scss/_base.scss */
+.footer-bottom .footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/*********************
+CONTACT PAGE TEMPLATE STYLES
+*********************/
 /*********************
 WOOOMMERCE STYLES
 *********************/
 /* Header cart */
-/* line 994, ../scss/_base.scss */
+/* line 1061, ../scss/_base.scss */
 #header-cart {
   max-height: 5rem;
   text-decoration: none;
@@ -2181,8 +2255,8 @@ WOOOMMERCE STYLES
 }
 
 /* Inverse styling */
-/* line 1006, ../scss/_base.scss */
-.inverse #header-cart {
+/* line 1073, ../scss/_base.scss */
+.colouring-light #header-cart {
   color: white;
 }
 
@@ -2305,12 +2379,12 @@ you can add resource intensive styles.
   /*********************
   HEADER STYLES
   *********************/
-  /* line 36, ../scss/_768up.scss */
+  /* line 38, ../scss/_768up.scss */
   #logo {
     max-height: 6rem;
   }
 
-  /* line 40, ../scss/_768up.scss */
+  /* line 42, ../scss/_768up.scss */
   #main-menu {
     display: inline-block;
     vertical-align: bottom;
@@ -2319,12 +2393,12 @@ you can add resource intensive styles.
   /*********************
   NAVIGATION STYLES
   *********************/
-  /* line 49, ../scss/_768up.scss */
+  /* line 51, ../scss/_768up.scss */
   #menu-toggle {
     display: none;
   }
 
-  /* line 53, ../scss/_768up.scss */
+  /* line 55, ../scss/_768up.scss */
   .nav {
     margin: 0;
     border: 0;
@@ -2332,7 +2406,7 @@ you can add resource intensive styles.
     /* highlight current page */
     /* end current highlighters */
   }
-  /* line 56, ../scss/_768up.scss */
+  /* line 58, ../scss/_768up.scss */
   .nav li {
     float: left;
     position: relative;
@@ -2342,7 +2416,7 @@ you can add resource intensive styles.
     */
     /* showing sub-menus */
   }
-  /* line 61, ../scss/_768up.scss */
+  /* line 63, ../scss/_768up.scss */
   .nav li a {
     padding-bottom: 0.15em;
     border-bottom: 0;
@@ -2351,12 +2425,12 @@ you can add resource intensive styles.
     has the possibility of being a mobile device.
     */
   }
-  /* line 81, ../scss/_768up.scss */
+  /* line 83, ../scss/_768up.scss */
   .nav li ul.sub-menu,
   .nav li ul.children {
     /* highlight sub-menu current page */
   }
-  /* line 90, ../scss/_768up.scss */
+  /* line 92, ../scss/_768up.scss */
   .nav li ul.sub-menu li,
   .nav li ul.children li {
     /*
@@ -2365,70 +2439,80 @@ you can add resource intensive styles.
     for usability. k, bai.
     */
   }
-  /* line 109, ../scss/_768up.scss */
+  /* line 111, ../scss/_768up.scss */
   .nav li ul.sub-menu li:last-child a,
   .nav li ul.children li:last-child a {
     border-bottom: 0;
   }
-  /* line 133, ../scss/_768up.scss */
+  /* line 135, ../scss/_768up.scss */
   .nav li:hover ul {
     top: auto;
     overflow: visible;
     visibility: visible;
   }
-  /* line 145, ../scss/_768up.scss */
-  .nav li.current-menu-item a,
-  .nav li.current_page_item a,
-  .nav li.current-page-ancestor a {
-    padding-bottom: 0.25em;
-  }
-  /* line 150, ../scss/_768up.scss */
+  /* line 152, ../scss/_768up.scss */
   .nav.collapsed {
     display: block;
   }
 
   /* end .nav */
-  /* Styles for inverse page */
-  /* line 157, ../scss/_768up.scss */
-  .inverse {
+  /* line 158, ../scss/_768up.scss */
+  .top-nav {
+    /* highlight current page */
+    /* end current highlighters */
+  }
+  /* line 161, ../scss/_768up.scss */
+  .top-nav li a {
+    padding-bottom: 0.3em;
+  }
+  /* line 169, ../scss/_768up.scss */
+  .top-nav li.current-menu-item a,
+  .top-nav li.current_page_item a,
+  .top-nav li.current-page-ancestor a {
+    padding-bottom: 0.15em;
+  }
+
+  /* Styles for light page */
+  /* line 177, ../scss/_768up.scss */
+  .colouring-light {
     /* end .nav */
   }
-  /* line 159, ../scss/_768up.scss */
-  .inverse #menu-toggle span {
+  /* line 179, ../scss/_768up.scss */
+  .colouring-light #menu-toggle span {
     background-color: white;
   }
-  /* line 165, ../scss/_768up.scss */
-  .inverse .nav li {
+  /* line 185, ../scss/_768up.scss */
+  .colouring-light .nav li {
     border-top: 0;
   }
-  /* line 167, ../scss/_768up.scss */
-  .inverse .nav li a {
+  /* line 187, ../scss/_768up.scss */
+  .colouring-light .nav li a {
     color: white;
   }
 
   /*********************
   POSTS & CONTENT STYLES
   *********************/
-  /* line 191, ../scss/_768up.scss */
+  /* line 211, ../scss/_768up.scss */
   .hentry header {
     margin: 1.75em 0 1.5em;
   }
 
-  /* line 197, ../scss/_768up.scss */
+  /* line 217, ../scss/_768up.scss */
   .post .featured-image {
     width: 50%;
     float: right;
     padding-left: 1%;
     margin: 0;
   }
-  /* line 204, ../scss/_768up.scss */
+  /* line 224, ../scss/_768up.scss */
   .post .entry-content {
     width: 50%;
     padding-right: 1%;
   }
 
-  /* line 212, ../scss/_768up.scss */
-  .page.inverse .hentry {
+  /* line 232, ../scss/_768up.scss */
+  .page.bg-image .hentry {
     width: 40%;
     margin: 5%;
   }
@@ -2439,28 +2523,28 @@ you can add resource intensive styles.
   /*********************
   SIDEBARS & ASIDES
   *********************/
-  /* line 229, ../scss/_768up.scss */
+  /* line 249, ../scss/_768up.scss */
   .sidebar {
     margin-top: 2.2em;
   }
 
-  /* line 233, ../scss/_768up.scss */
+  /* line 253, ../scss/_768up.scss */
   .widgettitle {
     border-bottom: 2px solid #444;
     margin-bottom: 0.75em;
   }
 
-  /* line 238, ../scss/_768up.scss */
+  /* line 258, ../scss/_768up.scss */
   .widget {
     padding: 0 10px;
     margin: 2.2em 0;
   }
-  /* line 243, ../scss/_768up.scss */
+  /* line 263, ../scss/_768up.scss */
   .widget ul li {
     margin-bottom: 0.75em;
     /* deep nesting */
   }
-  /* line 251, ../scss/_768up.scss */
+  /* line 271, ../scss/_768up.scss */
   .widget ul li ul {
     margin-top: 0.75em;
     padding-left: 1em;
@@ -2485,14 +2569,19 @@ you can add resource intensive styles.
   of overriding here if you styled them for
   mobile. Make sure to double check these!
   */
-  /* line 359, ../scss/_768up.scss */
+  /* line 379, ../scss/_768up.scss */
   .footer-info,
   #footer-menu {
     width: 33%;
     float: left;
   }
 
-  /* line 365, ../scss/_768up.scss */
+  /* line 384, ../scss/_768up.scss */
+  #footer-menu {
+    display: block;
+  }
+
+  /* line 389, ../scss/_768up.scss */
   .footer-nav li {
     float: none;
     /*
@@ -2503,83 +2592,100 @@ you can add resource intensive styles.
   }
 
   /* end .footer-nav */
-  /* line 379, ../scss/_768up.scss */
-  .home .footer-info {
+  /* line 405, ../scss/_768up.scss */
+  .footer-bottom.slimline #footer-menu {
+    display: none;
+  }
+  /* line 408, ../scss/_768up.scss */
+  .footer-bottom.slimline .footer-info {
     width: 100%;
   }
-  /* line 381, ../scss/_768up.scss */
-  .home .footer-info p {
-    margin: 0;
+  /* line 410, ../scss/_768up.scss */
+  .footer-bottom.slimline .footer-info p {
     float: left;
-    padding-right: 1rem;
+    padding-right: 2em;
+  }
+
+  /*********************
+  CONTACT PAGE TEMPLATE STYLES
+  *********************/
+  /* line 424, ../scss/_768up.scss */
+  .page-template-page-contact-form-php article,
+  .page-template-page-contact-form-php .contact-form {
+    width: 50%;
+    float: left;
+  }
+  /* line 429, ../scss/_768up.scss */
+  .page-template-page-contact-form-php .no-title {
+    margin-top: 4.25rem;
   }
 
   /*********************
   WOOOMMERCE STYLES
   *********************/
   /* Header cart */
-  /* line 394, ../scss/_768up.scss */
+  /* line 440, ../scss/_768up.scss */
   #header-cart {
     padding-top: 2.5rem;
   }
 
   /* Shop loop single product */
-  /* line 400, ../scss/_768up.scss */
+  /* line 446, ../scss/_768up.scss */
   .products {
     /* Changes when the product is the active slide. */
   }
-  /* line 401, ../scss/_768up.scss */
+  /* line 447, ../scss/_768up.scss */
   .products .product {
     margin: 1em auto;
   }
-  /* line 406, ../scss/_768up.scss */
+  /* line 452, ../scss/_768up.scss */
   .products .product-header {
     width: 220%;
     margin-left: -60%;
   }
-  /* line 411, ../scss/_768up.scss */
+  /* line 457, ../scss/_768up.scss */
   .products .product-title {
     text-decoration: none;
   }
-  /* line 413, ../scss/_768up.scss */
+  /* line 459, ../scss/_768up.scss */
   .products .product-title h2 {
     display: inline-block;
     font-size: 2.5em;
     margin: 0;
   }
-  /* line 420, ../scss/_768up.scss */
+  /* line 466, ../scss/_768up.scss */
   .products .button {
     float: right;
     margin-top: 0.7rem;
   }
-  /* line 429, ../scss/_768up.scss */
+  /* line 475, ../scss/_768up.scss */
   .products .product-basics {
     margin-left: -60%;
     float: left;
     font-family: "loveloblack";
   }
-  /* line 433, ../scss/_768up.scss */
+  /* line 479, ../scss/_768up.scss */
   .products .product-basics span {
     display: block;
   }
-  /* line 435, ../scss/_768up.scss */
+  /* line 481, ../scss/_768up.scss */
   .products .product-basics span.price {
     font-size: 1.66em;
   }
-  /* line 437, ../scss/_768up.scss */
+  /* line 483, ../scss/_768up.scss */
   .products .product-basics span.price del {
     display: none;
   }
-  /* line 440, ../scss/_768up.scss */
+  /* line 486, ../scss/_768up.scss */
   .products .product-basics span.price ins {
     text-decoration: none;
   }
-  /* line 445, ../scss/_768up.scss */
+  /* line 491, ../scss/_768up.scss */
   .products .product-basics span.onsale, .products .product-basics span.out-of-stock {
     font-size: 1.33em;
     color: red;
   }
-  /* line 453, ../scss/_768up.scss */
+  /* line 499, ../scss/_768up.scss */
   .products .product-header,
   .products .product-basics {
     visibility: hidden;
@@ -2590,31 +2696,31 @@ you can add resource intensive styles.
     -o-transition: visibility 0s linear 0.33333s, opacity 0.33333s linear;
     transition: visibility 0s linear 0.33333s, opacity 0.33333s linear;
   }
-  /* line 460, ../scss/_768up.scss */
+  /* line 506, ../scss/_768up.scss */
   .products .product-content {
     margin-top: 1em;
     position: relative;
   }
-  /* line 466, ../scss/_768up.scss */
+  /* line 512, ../scss/_768up.scss */
   .products .product-image .wp-post-image {
     width: 100%;
     height: auto;
   }
-  /* line 472, ../scss/_768up.scss */
+  /* line 518, ../scss/_768up.scss */
   .products .product-information {
     position: absolute;
     top: 0;
     opacity: 0;
   }
-  /* line 478, ../scss/_768up.scss */
+  /* line 524, ../scss/_768up.scss */
   .products .more-information {
     float: right;
   }
-  /* line 484, ../scss/_768up.scss */
+  /* line 530, ../scss/_768up.scss */
   .products .instock .out-of-stock {
     display: none;
   }
-  /* line 492, ../scss/_768up.scss */
+  /* line 538, ../scss/_768up.scss */
   .products .sy-active .product-header,
   .products .sy-active .product-basics {
     visibility: visible;
@@ -2624,21 +2730,21 @@ you can add resource intensive styles.
     -o-transition-delay: 0s, 0.33333s;
     transition-delay: 0s, 0.33333s;
   }
-  /* line 503, ../scss/_768up.scss */
+  /* line 549, ../scss/_768up.scss */
   .products .sy-active .product-image {
     -webkit-transition: opacity 0.33333s;
     -moz-transition: opacity 0.33333s;
     -o-transition: opacity 0.33333s;
     transition: opacity 0.33333s;
   }
-  /* line 506, ../scss/_768up.scss */
+  /* line 552, ../scss/_768up.scss */
   .products .sy-active .product-information {
     -webkit-transition: opacity 1s;
     -moz-transition: opacity 1s;
     -o-transition: opacity 1s;
     transition: opacity 1s;
   }
-  /* line 510, ../scss/_768up.scss */
+  /* line 556, ../scss/_768up.scss */
   .products .sy-active:hover .product-image {
     opacity: 0.4;
     -webkit-transition: opacity 1s;
@@ -2646,7 +2752,7 @@ you can add resource intensive styles.
     -o-transition: opacity 1s;
     transition: opacity 1s;
   }
-  /* line 514, ../scss/_768up.scss */
+  /* line 560, ../scss/_768up.scss */
   .products .sy-active:hover .product-information {
     opacity: 1;
     -webkit-transition: opacity 1s;
@@ -2655,66 +2761,67 @@ you can add resource intensive styles.
     transition: opacity 1s;
   }
 
-  /* line 522, ../scss/_768up.scss */
+  /* line 568, ../scss/_768up.scss */
   .slider-pager-container {
     text-align: center;
     margin: 1em auto;
   }
-  /* line 525, ../scss/_768up.scss */
+  /* line 571, ../scss/_768up.scss */
   .slider-pager-container .slider-pager {
     display: inline-block;
     max-width: 100%;
     text-align: left;
   }
-  /* line 530, ../scss/_768up.scss */
+  /* line 576, ../scss/_768up.scss */
   .slider-pager-container .more-photos {
     margin: 1rem 0 0.25rem;
     clear: right;
   }
-  /* line 535, ../scss/_768up.scss */
+  /* line 581, ../scss/_768up.scss */
   .slider-pager-container .thumbnail-container {
-    border-top: 1px solid black;
+    border-top: 1px solid #646464;
     padding: 1rem 0;
     display: inline-block;
   }
-  /* line 540, ../scss/_768up.scss */
+  /* line 586, ../scss/_768up.scss */
   .slider-pager-container .product-shortcut {
     display: inline-block;
     width: 6rem;
   }
-  /* line 544, ../scss/_768up.scss */
+  /* line 590, ../scss/_768up.scss */
   .slider-pager-container .wp-post-image {
     max-width: 100%;
-    height: 100%;
+    height: auto;
   }
 
   /* Slippry modifications */
-  /* line 575, ../scss/_768up.scss */
+  /* line 623, ../scss/_768up.scss */
   .sy-box {
     overflow: hidden;
   }
-  /* line 577, ../scss/_768up.scss */
+  /* line 625, ../scss/_768up.scss */
   .sy-box .sy-slides-wrap {
     width: 25%;
     margin: 0 auto;
+    height: auto;
   }
-  /* line 580, ../scss/_768up.scss */
+  /* line 629, ../scss/_768up.scss */
   .sy-box .sy-slides-wrap .sy-slides-crop {
     overflow: visible;
   }
-  /* line 585, ../scss/_768up.scss */
+  /* line 634, ../scss/_768up.scss */
   .sy-box .sy-controls li {
     width: 80%;
   }
-  /* line 587, ../scss/_768up.scss */
+  /* line 636, ../scss/_768up.scss */
   .sy-box .sy-controls li.sy-prev {
     left: -155%;
   }
-  /* line 590, ../scss/_768up.scss */
+  /* line 639, ../scss/_768up.scss */
   .sy-box .sy-controls li.sy-next {
     right: -155%;
   }
-  /* line 593, ../scss/_768up.scss */
+  /* line 642, ../scss/_768up.scss */
   .sy-box .sy-controls li a:after {
     background: none;
   }

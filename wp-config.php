@@ -103,8 +103,8 @@ define('WPLANG', '');
  * in their development environments.
  */
 if(WP_ENV == 'development') {
-  //define('WP_DEBUG', true);
-  //echo 'debug on';
+  define('WP_DEBUG', true);
+  echo '<div class="debug-note">debug on</div>';
 } else {
   define('WP_DEBUG', false);
 }
